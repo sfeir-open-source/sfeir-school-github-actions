@@ -1,0 +1,10 @@
+name: Reusable Workflow
+on: 
+  workflow_dispatch:
+
+jobs:
+  run-npm-test:
+    uses: ./.github/workflows/ex3-reusable.yml #local
+    #uses: {owner}/{repo}/.github/workflows/{myreusable-workflow.yaml}@main #remote
+    with:
+      node-version: 14
