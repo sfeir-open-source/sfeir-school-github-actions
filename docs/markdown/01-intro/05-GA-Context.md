@@ -1,3 +1,4 @@
+<!-- .slide: -->
 
 # Table of contents:
 

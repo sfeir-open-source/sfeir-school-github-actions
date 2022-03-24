@@ -1,3 +1,5 @@
+<!-- .slide: -->
+
 # Off-topic :
 
 * Git / GitHub concept
