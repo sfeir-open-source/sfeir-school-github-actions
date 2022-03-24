@@ -13,11 +13,8 @@ function gaBasicsSlides() {
     '02-GA-Basics/00-TITLE.md',
     '02-GA-Basics/01-Workflow.md',
     '02-GA-Basics/02-Example.md',
-<<<<<<< Updated upstream
+    '02-GA-Basics/03-Triggers.md',
     '02-GA-Basics/04-Exercices.md'
-=======
-    '02-GA-Basics/03-Triggers.md'
->>>>>>> Stashed changes
   ]
 }
 
