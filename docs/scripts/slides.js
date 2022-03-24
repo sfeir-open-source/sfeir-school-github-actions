@@ -27,7 +27,8 @@ function introSlides() {
     '01-intro/00-TITLE.md',
     '01-intro/01-objectifs.md',
     '01-intro/02-off-topic.md',
-    '01-intro/03-TOC.md'
+    '01-intro/03-TOC.md',
+    '01-intro/04-GA-Context.md'
   ];
 }
 
