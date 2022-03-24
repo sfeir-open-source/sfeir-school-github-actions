@@ -11,7 +11,8 @@ function schoolSlides() {
 function gaBasicsSlides() {
   return [
     '02-GA-Basics/00-TITLE.md',
-    '02-GA-Basics/01-Workflow.md'
+    '02-GA-Basics/01-Workflow.md',
+    '02-GA-Basics/02-Example.md'
   ]
 }
 
@@ -19,17 +20,6 @@ function gaBasicsSlides() {
 function gaMarketplaceSlides() {
   return [
     '05-GA-Marketplace/00-TITLE.md'
-  ];
-}
-
-
-function introSlides() {
-  return [
-    '01-intro/00-TITLE.md',
-    '01-intro/01-objectifs.md',
-    '01-intro/02-off-topic.md',
-    '01-intro/03-TOC.md',
-    '01-intro/04-GA-Context.md'
   ];
 }
 
@@ -48,6 +38,16 @@ function introReusableWorkflows() {
 function introAdvancedConceptsSlides() {
   return [
     '06-Advanced-Concepts/00-TITLE.md'
+  ];
+}
+
+function introSlides() {
+  return [
+    '01-intro/00-TITLE.md',
+    '01-intro/01-objectifs.md',
+    '01-intro/02-off-topic.md',
+    '01-intro/03-TOC.md',
+    '01-intro/04-GA-Context.md'
   ];
 }
 
