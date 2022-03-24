@@ -10,7 +10,8 @@ function schoolSlides() {
 
 function gaBasicsSlides() {
   return [
-    '02-GA-Basics/00-TITLE.md'
+    '02-GA-Basics/00-TITLE.md',
+    '02-GA-Basics/01-Workflow.md'
   ]
 }
 
