@@ -6,7 +6,7 @@
 ![badge](./assets/images/gde.png)
 ![company](./assets/images/logo_sfeir_bleu_orange.png)
 
-## Jean-François Garreau
+## Thibauld Dujardin
 
 ### CTO front
 <!-- .element: class="icon-rule icon-first" -->
