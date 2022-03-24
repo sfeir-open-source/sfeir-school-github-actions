@@ -23,3 +23,29 @@ Create a workflow that will test the Node application.
 <!-- .slide: class="transition blue"-->
 
 # Solution
+
+##--##
+<!-- .slide: class="with-code" -->
+
+```yaml
+name: npm test
+on: 
+  workflow_dispatch:
+
+jobs:
+  run-npm-test:
+    runs-on: ubuntu-latest
+    steps:
+        - name: checkout
+          uses: actions/checkout@v2
+          with:
+            fetch-depth: 0
+        - name : setup node
+          uses: actions/setup-node@v2
+          with:
+            node-version: 'lts/*'
+        - name: run test
+          run: |  
+            npm install
+            npm test
+```
