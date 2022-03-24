@@ -27,3 +27,4 @@ Tour de table ...
 **Feuille de présence (obligatoire)** <!-- .element: class="center" -->
 
 https://bit.ly/sfeir-xxx <!-- .element: class="center" -->
+
