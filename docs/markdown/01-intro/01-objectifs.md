@@ -2,6 +2,7 @@
 
 # Objectifs
 
-1. Découvrir les bases de Github actions <!-- .element: class="fragment" -->
-
-2. Etre autonome pour la création d'un workflow <!-- .element: class="fragment" -->
+<br/>
+* Découvrir les concepts de Github actions <!-- .element: class="fragment" -->
+* Savoir créer/maintenir un workflow <!-- .element: class="fragment" -->
+* Savoir utiliser la marketplace des github actions <!-- .element: class="fragment" -->
