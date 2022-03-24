@@ -3,9 +3,10 @@
 # Présentation
 
 ![speaker](./assets/images/gb.jpg)
-![badge second-badge](./assets/images/Terraform-Associate-Badge-transp.png)
-![badge second-badge](./assets/images/ckad_badge.png)
 ![company](./assets/images/logo-SFEIR-blanc.png)
+![badge first-badge](./assets/images/Terraform-Associate-Badge-transp.png)
+![badge second-badge mt-50](./assets/images/ckad_badge.png)
+
 
 <h2>Gaetan <span>BOGAERT</span></h2>
 
