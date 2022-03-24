@@ -1,3 +1,3 @@
-<!-- .slide: class="transition bg-blue" -->
+<!-- .slide: class="transition" -->
 
 # Github Actions basics
