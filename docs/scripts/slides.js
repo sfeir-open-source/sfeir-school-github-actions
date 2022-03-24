@@ -12,7 +12,8 @@ function gaBasicsSlides() {
   return [
     '02-GA-Basics/00-TITLE.md',
     '02-GA-Basics/01-Workflow.md',
-    '02-GA-Basics/02-Example.md'
+    '02-GA-Basics/02-Example.md',
+    '02-GA-Basics/04-Exercices.md'
   ]
 }
 
@@ -47,7 +48,8 @@ function introSlides() {
     '01-intro/01-objectifs.md',
     '01-intro/02-off-topic.md',
     '01-intro/03-TOC.md',
-    '01-intro/04-GA-Context.md'
+    '01-intro/04-Prerequisites.md',
+    '01-intro/05-GA-Context.md'
   ];
 }
 
