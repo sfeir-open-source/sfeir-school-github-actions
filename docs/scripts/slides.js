@@ -8,6 +8,20 @@ function schoolSlides() {
 ];
 }
 
+function gaBasicsSlides() {
+  return [
+    '02-GA-Basics/00-TITLE.md'
+  ]
+}
+
+
+function gaMarketplaceSlides() {
+  return [
+    '05-GA-Marketplace/00-TITLE.md'
+  ];
+}
+
+
 function introSlides() {
   return [
     '01-intro/00-TITLE.md',
@@ -40,9 +54,11 @@ function formation() {
     //
     ...schoolSlides(), //
     ...introSlides(),
+    ...gaBasicsSlides(),
     ...introInteractWithEnv(),
     ...introReusableWorkflows(),
-    ...introAdvancedConceptsSlides(),//
+    ...gaMarketplaceSlides(),
+    ...introAdvancedConceptsSlides()
   ].map(slidePath => {
     return { path: slidePath };
   });
