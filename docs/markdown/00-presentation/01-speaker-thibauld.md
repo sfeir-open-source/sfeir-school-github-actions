@@ -1,5 +1,6 @@
 <!-- .slide: class="speaker-slide" -->
 
+
 # Présentation
 
 ![speaker](./assets/images/jf.jpg)

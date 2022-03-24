@@ -11,6 +11,7 @@ function schoolSlides() {
 function introSlides() {
   return [
     '01-intro/00-TITLE.md',
+    '01-intro/01-objectifs.md',
     '01-intro/02-hors-sujet.md',
     '01-intro/03-deroulement.md'
   ];
