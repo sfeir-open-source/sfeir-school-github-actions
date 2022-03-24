@@ -40,11 +40,14 @@ jobs:
           uses: actions/checkout@v2
           with:
             fetch-depth: 0
+            
         - name : setup node
           uses: actions/setup-node@v2
           with:
             node-version: 'lts/*'
+
         - name: run test
+          shell: bash
           run: |  
             npm install
             npm test
