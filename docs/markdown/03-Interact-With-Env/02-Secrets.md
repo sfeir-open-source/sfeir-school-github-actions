@@ -1,24 +1,32 @@
 <!-- .slide: class="with-code" -->
 # Secrets 
 
-![float-left h-600](./assets/images/secrets.png)
+![float-right w-800](./assets/images/secrets.png)
 
 - Encrypted storage
 - Hidden from log
 
-<div style="display: flex">
+
+use in action: 
 
 ```yaml
 steps:
   - name: Hello world action
     with: # Set the secret as an input
       super_secret: ${{ secrets.SuperSecret }}
-    env: # Or as an environment variable
-      super_secret: ${{ secrets.SuperSecret }}
 ```
-<!-- .element: class="big-code" -->
 
-</div>
+use in bash :
+
+```yaml
+steps:
+  - shell: bash #pwsh #cmd
+    env:
+      SUPER_SECRET: ${{ secrets.SuperSecret }}
+    run: |
+      example-command "$SUPER_SECRET"
+```
+
 
 Notes: 
 
