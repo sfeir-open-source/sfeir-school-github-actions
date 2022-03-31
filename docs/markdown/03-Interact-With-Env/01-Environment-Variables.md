@@ -3,8 +3,8 @@
 
 |Context|Use case|Example|
 | :--- | :----: | ---: |
-| Header | Reference custom environment variables defined in the workflow. | `${{env.MY_VARIABLE}}` |
-| env | Reference information about the workflow run and the event that triggered the run. | `${{github.repository}}` |
+| env | Reference custom environment variables defined in the workflow. | `${{env.MY_VARIABLE}}` |
+| github | Reference information about the workflow run and the event that triggered the run. | `${{github.repository}}` |
 
 ##==##
 <!-- .slide: class="with-code"-->
