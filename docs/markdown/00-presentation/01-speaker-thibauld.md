@@ -4,7 +4,7 @@
 # Présentation
 
 ![speaker](./assets/images/jf.jpg)
-![badge](./assets/images/cloud-archi_badge.png)
+![badge first-badge mt-50](./assets/images/cloud-archi_badge.png)
 ![company](./assets/images/logo-SFEIR-blanc.png)
 
 ## Thibauld Dujardin
