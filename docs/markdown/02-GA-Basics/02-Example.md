@@ -20,7 +20,7 @@ jobs:
         run: echo "Goodbye!"
 ```
 
-##--## 
+##--##
 
 <!-- .slide: class="with-code" -->
 # Example 2
@@ -33,15 +33,13 @@ jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Say Hello
+      - name: Say Hello
         run: echo "Hello world!"
-      -
-        name: Do stuff
+      - name: Do stuff
         run: |
           echo "Step 1..."
           echo "Step 2..."
           echo "Step 3..."
-      -
-        name: Say Goodbye
+      - name: Say Goodbye
         run: echo "Goodbye!"
+```
