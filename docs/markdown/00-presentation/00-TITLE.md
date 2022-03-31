@@ -1,8 +1,8 @@
-<!-- .slide: class="first-slide" sfeir-level="2" sfeir-techno="xxx" -->
+<!-- .slide: class="first-slide" sfeir-level="2" sfeir-techno="G.A" -->
 
 # **Welcome to SFEIR School**
 
-## **XXX 200**
+## **Github Action 200**
 
 ##==##
 
@@ -24,6 +24,3 @@ Tour de table ...
 </p>
 <br><br>
 
-**Feuille de présence (obligatoire)** <!-- .element: class="center" -->
-
-https://bit.ly/sfeir-xxx <!-- .element: class="center" -->
