@@ -1,18 +1,18 @@
-<!-- .slide: class="speaker-slide" -->
+<!-- .slide: class="speaker-slide blue" -->
 
 
 # Présentation
 
-![speaker](./assets/images/jf.jpg)
-![badge first-badge mt-50](./assets/images/cloud-archi_badge.png)
+![speaker blue](./assets/images/jf.jpg)
+![badge](./assets/images/cloud-archi_badge.png)
 ![company](./assets/images/logo-SFEIR-blanc.png)
+ 
+<h2>Thibauld <span>DUJARDIN</span></h2>
 
-## Thibauld Dujardin
-
-### CTO front
+### Site Reliability Engineer
 <!-- .element: class="icon-rule icon-first" -->
 
-### @jefbinomed
-<!-- .element: class="icon-twitter icon-second" -->
+### dujardin.t@sfeir.com
+<!-- .element: class="icon-mail icon-second" -->
 
 

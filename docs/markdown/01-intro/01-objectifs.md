@@ -4,4 +4,4 @@
 
 * Known github actions basics
 * Create/Update github workflow
-* use github actions markeplace
+* Use github actions markeplace

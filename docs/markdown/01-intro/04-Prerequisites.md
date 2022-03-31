@@ -7,4 +7,4 @@
 * Initialize your exercice repository
   * Create a new repository
   * Download source code
-  * commit the exercice template (`asset/my-react-app`)
+  * Commit the exercice [template](https://github.com/sfeir-open-source/sfeir-school-github-actions/main/step/00-prerequisites)

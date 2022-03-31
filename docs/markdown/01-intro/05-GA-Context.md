@@ -1,11 +1,5 @@
 <!-- .slide: -->
 
-# Table of contents:
+# G.A Context:
 
-**Modules:**
-
-* Github Actions basics
-* Interact with GitHub envirovnment
-* Reusable Workflows
-* GitHub Actions Marketplace
-* Advanced concept
+// TODO : do it

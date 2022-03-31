@@ -1,4 +1,4 @@
-<!-- .slide: class="first-slide" sfeir-level="2" sfeir-techno="xxx" -->
+<!-- .slide: class="first-slide" sfeir-level="2" sfeir-techno="G.A" -->
 
 # **Welcome to SFEIR School**
 
@@ -23,8 +23,4 @@ Quand est-ce qu'on mange ?<br>
 Tour de table ...
 </p>
 <br><br>
-
-**Feuille de présence (obligatoire)** <!-- .element: class="center" -->
-
-https://bit.ly/sfeir-xxx <!-- .element: class="center" -->
 
