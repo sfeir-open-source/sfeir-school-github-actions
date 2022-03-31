@@ -1,7 +1,21 @@
 <!-- .slide: class="two-column-layout"-->
 # Environment Variables
 
+Contexts :
+
+* `env`
+* `github`
+
+| Context | Use case                                                                           | Example                  |
+| :---    |    :----:                                                                          | ---:                     |
+| Header  | Reference custom environment variables defined in the workflow.                    | ${{ env.MY_VARIABLE }}   |
+| env     | Reference information about the workflow run and the event that triggered the run. | ${{ github.repository }} |
+
+##==##
+# Environment Variables types
+
 ##--##
+
 Three types of variable : 
 * for the entire workflow : `OPERATING_SYSTEM`
 * for specific jobs : `GREETING`
