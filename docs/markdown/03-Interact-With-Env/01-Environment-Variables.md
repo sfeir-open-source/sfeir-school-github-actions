@@ -1,19 +1,14 @@
-<!-- .slide: class="two-column-layout"-->
+<!-- .slide: class="with-code" -->
 # Environment Variables
 
-Contexts :
-
-* `env`
-* `github`
-
-| Context | Use case                                                                           | Example                  |
-| :---    |    :----:                                                                          | ---:                     |
-| Header  | Reference custom environment variables defined in the workflow.                    | ${{ env.MY_VARIABLE }}   |
-| env     | Reference information about the workflow run and the event that triggered the run. | ${{ github.repository }} |
+|Context|Use case|Example|
+| :--- | :----: | ---: |
+| Header | Reference custom environment variables defined in the workflow. | `${{env.MY_VARIABLE}}` |
+| env | Reference information about the workflow run and the event that triggered the run. | `${{github.repository}}` |
 
 ##==##
+<!-- .slide: class="two-column-layout"-->
 # Environment Variables types
-
 ##--##
 
 Three types of variable : 
@@ -21,6 +16,7 @@ Three types of variable :
 * for specific jobs : `GREETING`
 * for specific steps : `FIRST_NAME`
 ##--##
+
 <!-- .slide: class="with-code" -->
 ```yaml
 env:
