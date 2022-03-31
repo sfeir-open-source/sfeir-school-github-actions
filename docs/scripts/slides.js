@@ -28,7 +28,8 @@ function gaMarketplaceSlides() {
 function introInteractWithEnv() {
   return [
     '03-Interact-With-Env/00-TITLE.md',
-    '03-Interact-With-Env/01-Environment-Variables.md'
+    '03-Interact-With-Env/01-Environment-Variables.md',
+    '03-Interact-With-Env/02-Secrets.md'
   ];
 }
 
