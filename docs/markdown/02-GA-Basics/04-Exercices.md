@@ -26,6 +26,7 @@ Create a workflow that will test the Node application.
 
 ##--##
 <!-- .slide: class="with-code" -->
+# Solution
 
 ```yaml
 name: npm test

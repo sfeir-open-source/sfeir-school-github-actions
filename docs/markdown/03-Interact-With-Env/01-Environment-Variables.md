@@ -8,9 +8,9 @@
 
 ##==##
 <!-- .slide: class="with-code"-->
-# Environment Variables : Types
+# Environment Variables : Scope
 
-Three types of variable : 
+Three variable scopes : 
 * for the entire workflow : `OPERATING_SYSTEM`
 * for specific jobs : `GREETING`
 * for specific steps : `FIRST_NAME`
@@ -34,11 +34,26 @@ jobs:
 ##==##
 # Environment Variables : Naming conventions
 
-* Filesystem : `_PATH` suffix, except for `HOME`, `GITHUB_ENV`, and `GITHUB_WORKSPACE`.
+* Filesystem : `_PATH` suffix (except for `HOME`,`GITHUB_ENV` and `GITHUB_WORKSPACE`)
 
-* Some name are already used : `GITHUB_REF`, `GITHUB_SHA`, `GITHUB_ENV`...
+<br>
+<br>
 
-<br><br>
+* Must match :
+  * alphanumeric characters ([a-z], [A-Z], [0-9]) 
+  * underscores (_)
+  * UPPER_CASE
+
+<br>
+<br>
+
+* Some name are already used : 
+  * `GITHUB_REF`
+  * `GITHUB_SHA`
+  * `GITHUB_ENV`
+  * ...
+
+Notes: 
 More information at : 
 - `https://docs.github.com/en/actions/learn-github-actions/environment-variables#default-environment-variables`
 
