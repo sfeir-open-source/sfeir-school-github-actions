@@ -5,7 +5,7 @@
 **Modules:**
 
 * Github Actions basics
-* Interact with GitHub envirovnment
+* Interact with GitHub environment
 * Reusable Workflows
 * GitHub Actions Marketplace
 * Advanced concept
