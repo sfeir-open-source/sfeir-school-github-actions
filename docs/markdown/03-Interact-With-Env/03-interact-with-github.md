@@ -3,7 +3,7 @@
 
 Github provide a token to interact with Github
 
-- automatically generated for each job
+- Automatically generated for each job
 - Default permissions (RW/ RO) for **current repository**
 
 ```yaml
@@ -13,8 +13,8 @@ permissions:
   ...
   issues: read|write|none
 ```
-- it's a secret ! `${{ secrets.GITHUB_TOKEN }}`
-- **Don't trigger new workflow**
+- It's a secret ! `${{ secrets.GITHUB_TOKEN }}`
+- **Does'n't trigger new workflows**
 
 Notes: 
 Can configure restrictive or permissive mode at org/repo level

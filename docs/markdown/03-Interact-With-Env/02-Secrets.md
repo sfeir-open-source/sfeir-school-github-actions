@@ -6,8 +6,7 @@
 - Encrypted storage
 - Hidden from log
 
-
-use in action: 
+Use in action: 
 
 ```yaml
 steps:
@@ -16,7 +15,7 @@ steps:
       super_secret: ${{ secrets.SuperSecret }}
 ```
 
-use in bash :
+Use in bash :
 
 ```yaml
 steps:
