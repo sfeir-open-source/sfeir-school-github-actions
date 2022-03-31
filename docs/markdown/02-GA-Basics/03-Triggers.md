@@ -1,14 +1,11 @@
-<!-- .slide:  -->
+<!-- .slide: class="with-code" -->
 # Triggers
 
 <br>
 
-### Event List
-* push, pull_request, schedule, issue, workflow_dispatch
+## Event List
+* push, pull_request, schedule, issue, workflow_dispatch, ...
 
-[Exhaustive list float-right](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#webhook-events)
-
-### Use event attributes
 ```yaml
 name: event-triggers-example
 on:
@@ -26,5 +23,8 @@ on:
     - cron: '*/15 * * * *'
 jobs:
   my-awesome-job:
-   ....
 ```
+
+Notes:
+
+https://docs.github.com/en/actions/reference/events-that-trigger-workflows#webhook-events)
