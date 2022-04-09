@@ -14,7 +14,7 @@ permissions:
   issues: read|write|none
 ```
 - It's a secret ! `${{ secrets.GITHUB_TOKEN }}`
-- **Does'n't trigger new workflows**
+- **Doesn't trigger new workflows**
 
 Notes: 
 Can configure restrictive or permissive mode at org/repo level

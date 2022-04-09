@@ -7,8 +7,6 @@ Create a workflow that will test the Node application.
 
 **Goal** : Complete the workflow file located in order to test the npm command.
 
-
- 
 <ul>
     <li class="fragment">Add the checkout step using the <a href="https://github.com/marketplace/actions/checkout">marketplace</a></li>
     <li class="fragment">Setup Node in the GA with the <code>lts/*</code> version</li>
@@ -18,14 +16,13 @@ Create a workflow that will test the Node application.
 </ul>
 <div class="fragment"> </br><strong>Bonus</strong> : Run the differents command in the same step </div>
 
-
 ##--##
 <!-- .slide: class="transition blue"-->
 
 # Solution
 
 ##--##
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="with-code"-->
 # Solution
 
 ```yaml
@@ -53,4 +50,3 @@ jobs:
             npm install
             npm test
 ```
-<!-- .element: class="big-code" -->

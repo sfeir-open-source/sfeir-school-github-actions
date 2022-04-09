@@ -9,3 +9,6 @@
 `.github/workflows`
 
 //TODO : Add need etc 
+
+//TODO parall jobs + required etc 
+//     needs: job1 / if allways ?
