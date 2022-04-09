@@ -38,7 +38,8 @@ function introInteractWithEnv() {
 function introReusableWorkflows() {
   return [
     '04-Reusable-Workflows/00-TITLE.md',
-    '04-Reusable-Workflows/01-Reusable-workflow.md'
+    '04-Reusable-Workflows/01-Reusable-workflow.md',
+    '04-Reusable-Workflows/02-Exercices.md'
   ];
 }
 
