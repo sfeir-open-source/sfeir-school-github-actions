@@ -1,11 +1,24 @@
-<!-- .slide: -->
+<!-- .slide: class="with-code" -->
 # Github Runner
 
 * GitHub-hosted
   * quicker, simpler way to run your workflows
 
+```yaml
+    runs-on: [ubuntu-latest]
+```
+<!-- .element: class="big-code" -->
+
+<br/>
+
 * Self-hosted
   * highly configurable way to run workflows
+
+```yaml
+    runs-on: [self-hosted, linux, ARM64]
+```
+<!-- .element: class="big-code" -->
+
 
 Notes: 
 
@@ -31,51 +44,56 @@ Notes:
 <!-- .slide: -->
 # Virtual environment available
 
-| Virtual environment  |        YAML workflow label         |                                                                           Notes |
-| :------------------- | :--------------------------------: | ------------------------------------------------------------------------------: |
-| Windows Server 2022  | `windows-latest` or `windows-2022` | The `windows-latest` label currently uses the Windows Server 2022 runner image. |
-| Windows Server 2019  |            windows-2019            |                                                                                 |
-| Ubuntu 20.04         | `ubuntu-latest` or `ubuntu-20.04`  |                                                                                 |
-| Ubuntu 18.04         |           `ubuntu-18.04`           |                                                                                 |
-| macOS Big Sur 11     |    `macos-latest` or `macos-11`    |                The macos-latest label currently uses the macOS 11 runner image. |
-| macOS Catalina 10.15 |           `macos-10.15`            |                                                                                 |
+| Virtual environment  |        YAML workflow label         |                  Notes |
+| :------------------- | :--------------------------------: |-----------------------:|
+| Windows Server 2022  | `windows-latest` or `windows-2022` |        `latest` = 2022 |
+| Windows Server 2019  |            windows-2019            |                        |
+| Ubuntu 20.04         | `ubuntu-latest` or `ubuntu-20.04`  |                        |
+| Ubuntu 18.04         |           `ubuntu-18.04`           |                        |
+| macOS Big Sur 11     |    `macos-latest` or `macos-11`    |          `latest` = 11 |
+| macOS Catalina 10.15 |           `macos-10.15`            |                        |
 
 ##==##
 <!-- .slide: -->
-# Hardware specification
+# Hardware and Pricing
 
-<br>
+| Virtual environment    |    CPU    |   RAM | SSD Disk space |
+|:-----------------------|:---------:|------:|---------------:|
+| Ubuntu / Window Server |   2 CPU   |  7 GB |          14 GB |
+| MacOS                  |   3 CPU   | 14 GB |          14 GB |
 
-## Windows and Linux virtual machines
 
-* 2-core CPU
-* 7 GB of RAM memory
-* 14 GB of SSD disk space
-<br>
-<br>
-<br>
-<br>
+<br/>
 
-## MacOS virtual machines
 
-* 3-core CPU
-* 14 GB of RAM memory
-* 14 GB of SSD disk space
+* Free for public repository or 2000 min/month (**Free plan**)
 
+<br/>
+<br/>
+
+| Operating system	 | Minute multiplier |
+|:------------------|:------------------|
+| Linux             | 	1                |
+| macOS             | 	10               |
+| Windows           | 	2                |
 
 ##==##
 <!-- .slide: class="with-code" -->
 
 # Preinstalled software
 
-Ubuntu 20.04.4 LTS: 
+* [Ubuntu 20.04.4 LTS](https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-Readme.md): 
 
-* Bash 5.0.17(1)-release
-* Node 16.14.2
-* Python3 3.8.10
-* Helm 3.8.1
-* Pip 20.0.2
-* ...
+```
+Bash 5.0.17(1)-release
+Node 16.14.2
+Python3 3.8.10
+Helm 3.8.1
+Pip 20.0.2
+... 
+```
+
+* Customize tools
 
 ```yaml
     - name: Install jq tool
@@ -86,30 +104,3 @@ Ubuntu 20.04.4 LTS:
 
 Notes: 
 apt-get, brew, choco etc
-
-##==##
-<!-- .slide: class="with-code" -->
-
-# Usage
-
-Using default labels to route jobs
-
-* self-hosted - Run this job on a self-hosted runner.
-* linux - Only use a Linux-based runner.
-* ARM64 - Only use a runner based on ARM64 hardware.
-
-```yaml
-    runs-on: [self-hosted, linux, ARM64]
-```
-
-Using custom labels to route jobs
-
-* self-hosted - Run this job on a self-hosted runner.
-* linux - Only use a Linux-based runner.
-* x64 - Only use a runner based on x64 hardware.
-* gpu - This custom label has been manually assigned to self-hosted runners with the GPU hardware installed.
-
-
-```yaml 
-runs-on: [self-hosted, linux, x64, gpu]
-```
