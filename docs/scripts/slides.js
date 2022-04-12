@@ -30,15 +30,16 @@ function introInteractWithEnv() {
     '03-Interact-With-Env/00-TITLE.md',
     '03-Interact-With-Env/01-Environment-Variables.md',
     '03-Interact-With-Env/02-Secrets.md',
-    '03-Interact-With-Env/03-interact-with-github.md'
-
+    '03-Interact-With-Env/03-interact-with-github.md',
+    '03-Interact-With-Env/04-Runner.md'
   ];
 }
 
 function introReusableWorkflows() {
   return [
     '04-Reusable-Workflows/00-TITLE.md',
-    '04-Reusable-Workflows/01-Reusable-workflow.md'
+    '04-Reusable-Workflows/01-Reusable-workflow.md',
+    '04-Reusable-Workflows/02-Exercices.md'
   ];
 }
 
