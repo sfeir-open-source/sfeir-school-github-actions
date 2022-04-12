@@ -26,7 +26,7 @@ The text below is the template you could use for your readme
 
 # Slides
 
-You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-xxx/).
+You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-github-actions).
 
 ## Develop
 
