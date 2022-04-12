@@ -44,23 +44,23 @@ Notes:
 <!-- .slide: -->
 # Virtual environment available
 
-| Virtual environment  |        YAML workflow label         |                  Notes |
-| :------------------- | :--------------------------------: |-----------------------:|
-| Windows Server 2022  | `windows-latest` or `windows-2022` |        `latest` = 2022 |
-| Windows Server 2019  |            windows-2019            |                        |
-| Ubuntu 20.04         | `ubuntu-latest` or `ubuntu-20.04`  |                        |
-| Ubuntu 18.04         |           `ubuntu-18.04`           |                        |
-| macOS Big Sur 11     |    `macos-latest` or `macos-11`    |          `latest` = 11 |
-| macOS Catalina 10.15 |           `macos-10.15`            |                        |
+| Virtual environment  |        YAML workflow label         |           Notes |
+| :------------------- | :--------------------------------: | --------------: |
+| Windows Server 2022  | `windows-latest` or `windows-2022` | `latest` = 2022 |
+| Windows Server 2019  |            windows-2019            |                 |
+| Ubuntu 20.04         | `ubuntu-latest` or `ubuntu-20.04`  |                 |
+| Ubuntu 18.04         |           `ubuntu-18.04`           |                 |
+| macOS Big Sur 11     |    `macos-latest` or `macos-11`    |   `latest` = 11 |
+| macOS Catalina 10.15 |           `macos-10.15`            |                 |
 
 ##==##
 <!-- .slide: -->
 # Hardware and Pricing
 
-| Virtual environment    |    CPU    |   RAM | SSD Disk space |
-|:-----------------------|:---------:|------:|---------------:|
-| Ubuntu / Window Server |   2 CPU   |  7 GB |          14 GB |
-| MacOS                  |   3 CPU   | 14 GB |          14 GB |
+| Virtual environment    |  CPU  |   RAM | SSD Disk space |
+| :--------------------- | :---: | ----: | -------------: |
+| Ubuntu / Window Server | 2 CPU |  7 GB |          14 GB |
+| MacOS                  | 3 CPU | 14 GB |          14 GB |
 
 
 <br/>
@@ -71,11 +71,11 @@ Notes:
 <br/>
 <br/>
 
-| Operating system	 | Minute multiplier |
-|:------------------|:------------------|
-| Linux             | 	1                |
-| macOS             | 	10               |
-| Windows           | 	2                |
+| Operating system | Minute multiplier |
+| :--------------- | :---------------- |
+| Linux            | 1                 |
+| macOS            | 10                |
+| Windows          | 2                 |
 
 ##==##
 <!-- .slide: class="with-code" -->
