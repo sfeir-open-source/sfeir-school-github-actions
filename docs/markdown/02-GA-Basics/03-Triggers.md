@@ -3,7 +3,7 @@
 
 <br>
 
-## Event List
+## [Event List](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows)
 * push, pull_request, schedule, issue, workflow_dispatch, ...
 
 ```yaml
