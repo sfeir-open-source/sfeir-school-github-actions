@@ -1,45 +1,19 @@
 <!-- .slide: class="with-code" -->
-# Example 1
+# Example
 
 ```yaml
-name: hello-world-example
-on:
-  push:
+name: Any-Name #Name of the workflow
+on: [push] # On which events this workflow should be triggered. We can use this as an array as well (on: [push, pull_request, issue])
 jobs:
-  say-hello:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Say Hello
-        run: echo "Hello world!"
-      - name: Do stuff
-        run: |
-          echo "Step 1..."
-          echo "Step 2..."
-          echo "Step 3..."
-      - name: Say Goodbye
-        run: echo "Goodbye!"
-```
-
-##--##
-
-<!-- .slide: class="with-code" -->
-# Example 2
-
-```yaml
-name: hello-world-example
-on:
-  push:
-jobs:
-  say-hello:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Say Hello
-        run: echo "Hello world!"
-      - name: Do stuff
-        run: |
-          echo "Step 1..."
-          echo "Step 2..."
-          echo "Step 3..."
-      - name: Say Goodbye
-        run: echo "Goodbye!"
+  run-shell-command:         # Name of the job 1
+    runs-on: ubuntu-latest # Selecting a GitHub Hosted Runner (Here selected an ubuntu machine)
+    steps:                      # Automated Steps of the job
+      - name: echo a string   # Name of the Step 1 (Optional)
+        run: echo "Hello"     # command of the step 1
+      - name: multiline commands  # Name of the Step 2 
+        run: |                    # Multiline commands of the step 2
+          node -v
+          npm -v
+      - name: cloning repo files into the vm   # Consuming pre published actions from the marketplace
+        uses: actions/checkout@v2.3.4          # Signature of the action you want to use here from the market place
 ```

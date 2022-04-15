@@ -2,13 +2,12 @@
 
 # Github Actions basics
 
-<br>
+"A workflow is a configurable automated process that will run one or more jobs on runner"
 
-## Sequence of commands in YAML file
+<br/>
 
-`.github/workflows`
-
-//TODO : Add need etc 
-
-//TODO parall jobs + required etc 
-//     needs: job1 / if allways ?
+* Defined by a YAML file located in folder `.github/workflows`
+* Triggered by an event in your repository, manually, or scheduled.
+* Multiple workflows in repository
+* Jobs can perform a different set of steps.
+* Each job run in a newly virtual machine
