@@ -49,7 +49,8 @@ function introReusableWorkflows() {
 
 function introAdvancedConceptsSlides() {
   return [
-    '06-Advanced-Concepts/00-TITLE.md'
+    '06-Advanced-Concepts/00-TITLE.md',
+    '06-Advanced-Concepts/01-Advenced-concept.md'
   ];
 }
 
