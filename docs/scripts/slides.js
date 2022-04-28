@@ -23,7 +23,9 @@ function gaBasicsSlides() {
 
 function gaMarketplaceSlides() {
   return [
-    '05-GA-Marketplace/00-TITLE.md'
+    '05-GA-Marketplace/00-TITLE.md',
+    '05-GA-Marketplace/01-GA-Marketplace.md',
+    '05-GA-Marketplace/02-Exercices.md'
   ];
 }
 
