@@ -63,7 +63,7 @@ jobs:
 * `matrix`
 * multiple jobs - multiple configurations 
 * run in parallel
-* maximum of 256 jobs per workflow run
+* maximum of 256 jobs per workflow run - `max-parallel: $n`
 
 ##==## 
 <!-- .slide: class="two-column-layout with-code"-->
@@ -76,6 +76,7 @@ jobs:
 jobs:
   example_matrix:
     strategy:
+      max-parallel: 2
       matrix:
         version: [10, 12, 14]
         os: [ubuntu-latest, windows-latest]
@@ -131,20 +132,16 @@ strategy:
 
 ##--##
 
-
 * {fruit: apple, animal: cat, color: pink, shape: circle}
 * {fruit: apple, animal: dog, color: green, shape: circle}
 * {fruit: pear, animal: cat, color: pink}
 * {fruit: pear, animal: dog, color: green}
 * {fruit: banana}
 * {fruit: banana, animal: cat}
-  
 
 ##==##
 <!-- .slide: class="with-code"-->
 # Example
-
-Including variable
 
 ```yaml
 jobs:
@@ -166,3 +163,37 @@ jobs:
         run: npm install -g npm@${{ matrix.npm }}
       - run: npm --version
 ```
+
+##==##
+<!-- .slide: class="two-column-layout with-code"-->
+# Excluding configurations 
+##--##
+
+```yaml
+strategy:
+  matrix:
+    os: [macos-latest, windows-latest]
+    version: [12, 14, 16]
+    environment: [staging, production]
+    exclude:
+      - os: macos-latest
+        version: 12
+        environment: production
+      - os: windows-latest
+        version: 16
+runs-on: ${{ matrix.os }}
+```
+
+##--##
+
+* {os: macos-latest, version: 12, environment: staging}
+* {os: macos-latest, version: 14, environment: staging}
+* {os: macos-latest, version: 14, environment: production}
+* {os: macos-latest, version: 16, environment: staging}
+* {os: macos-latest, version: 16, environment: production}
+* ...
+ 
+
+Notes: 
+
+All include combinations are processed after exclude. This allows you to use include to add back combinations that were previously excluded.
