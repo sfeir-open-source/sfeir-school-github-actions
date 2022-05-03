@@ -197,3 +197,36 @@ runs-on: ${{ matrix.os }}
 Notes: 
 
 All include combinations are processed after exclude. This allows you to use include to add back combinations that were previously excluded.
+
+##==##
+<!-- .slide: class="with-code"-->
+# Workflow concurrency
+
+* single job or workflow will run at a time. 
+
+* queued job or workflow : 
+  * are pending 
+  * cancel the older 
+* must be unique
+* fallback value for event trigger 
+
+```yaml
+  concurrency: ci-${{ github.ref }}
+
+  concurrency: 
+    group: ${{ github.head_ref || github.run_id }}
+    cancel-in-progress: true
+
+  concurrency: 
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+```
+
+Notes:
+
+* default :  any in-progress job or run
+* ensure that only a single job or workflow using the same concurrency group will run at a time. 
+* `||` fallback value
+* To only cancel in-progress runs of the same workflow, you can use the `github.workflow` property to build the concurrency group - eg PR same workflow
+
