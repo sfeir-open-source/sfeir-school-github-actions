@@ -1,7 +1,7 @@
 <!-- .slide: class="with-code"-->
 # Artifacts
 
-"Artifacts allow you to share data between jobs in a workflow and store data once that workflow has completed."
+"*Artifacts allow you to share data between jobs in a workflow and store data once that workflow has completed.*"
 
 * Uploading files: 
   * use `upload-artifact` action
