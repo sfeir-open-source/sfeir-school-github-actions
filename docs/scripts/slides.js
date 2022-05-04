@@ -50,7 +50,11 @@ function introReusableWorkflows() {
 function introAdvancedConceptsSlides() {
   return [
     '06-Advanced-Concepts/00-TITLE.md',
-    '06-Advanced-Concepts/01-Advenced-concept.md'
+    '06-Advanced-Concepts/01-Advanced-concept.md',
+    '06-Advanced-Concepts/02-Error-Handling.md',
+    '06-Advanced-Concepts/03-Artifacts.md',
+    '06-Advanced-Concepts/04-Setup.md',
+    '06-Advanced-Concepts/05-Cache.md'
   ];
 }
 

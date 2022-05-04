@@ -5,7 +5,7 @@
 - Since November 2021
 - Reusable, avoid duplication 
 - Reference an entire workflow in another one
-- Composite =/= Reusable Workflows
+- Composite != Reusable Workflows
 - Can’t reference a reusable workflow that’s in a private repository
 - Reusable workflows can’t be stacked on top of one another
 
@@ -15,7 +15,7 @@
 
 ##--##
 
-Before: 
+**Without:**
 
 ```yaml
 jobs:
@@ -36,7 +36,24 @@ jobs:
 ```
 ##--##
 
-After :
+**With :**
+
+*Reusable Workflow*
+```yaml
+on:
+  workflow_call:
+    inputs:
+      WORKING_DIRECTORY:
+        type: string
+        default: .
+        
+jobs:
+  my-job:
+    ....
+```
+
+_Caller_
+
 ```yaml
 jobs:
   publish:

@@ -1,10 +1,18 @@
-<!-- .slide: class="with-code" -->
+<!-- .slide: -->
 # Secrets 
-
-![float-right w-800](./assets/images/secrets.png)
 
 - Encrypted storage
 - Hidden from log
+
+##==##
+<!-- .slide: class="two-column-layout with-code"-->
+# Secrets 
+
+[//]: # (![float-right w-800]&#40;./assets/images/secrets.png&#41;)
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+##--##
 
 Use in action: 
 
@@ -14,6 +22,8 @@ steps:
     with: # Set the secret as an input
       super_secret: ${{ secrets.SuperSecret }}
 ```
+
+##--##
 
 Use in bash :
 
@@ -25,6 +35,7 @@ steps:
     run: |
       example-command "$SUPER_SECRET"
 ```
+
 
 
 Notes: 
