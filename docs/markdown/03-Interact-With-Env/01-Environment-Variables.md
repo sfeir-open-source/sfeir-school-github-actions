@@ -76,7 +76,7 @@ steps:
 ```
 <br>
 
-* Jobs outputs :  
+* Steps outputs : 
 
 ```yaml
 steps:
@@ -96,4 +96,35 @@ For example, /home/runner/work/_temp/_runner_file_commands/set_env_87406d6e-4979
 * update are only available to any subsequent steps
 
 eg. if a step update a environment variable, the environment variable doesn't have access to the new value but subsequent steps do.
- 
+
+##==##
+<!-- .slide: class="with-big-code"-->
+# Environment Variables : Values between steps and jobs
+
+* Jobs outputs : 
+
+```yaml
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    outputs:
+      url: ${{ steps.step1.outputs.url }} 
+    steps:
+      - id: step1
+        name: send url to other job
+        run: echo "::set-output name=url::https://google.com"
+```
+
+<br>
+<br>
+
+```yaml
+job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - run: user/some-action@v1
+        with:
+          url: ${{ needs.job1.outputs.url }} 
+
+```
