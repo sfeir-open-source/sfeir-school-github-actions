@@ -3,7 +3,7 @@
 
 # Présentation
 
-![speaker blue](./assets/images/jf.jpg)
+![speaker blue](./assets/images/thibauld.jpeg)
 ![badge](./assets/images/cloud-archi_badge.png)
 ![company](./assets/images/logo-SFEIR-blanc.png)
  

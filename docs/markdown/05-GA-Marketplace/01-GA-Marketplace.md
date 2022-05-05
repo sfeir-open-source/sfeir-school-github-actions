@@ -73,4 +73,20 @@ Opportunistic - sensitive information is accidentally output to the log and an a
 Intentional - an attacker is able to insert a program into your workflow that steals credentials and sends them to the attacker
 Use SHA-1 instead of version
 
+##==##
+<!-- .slide: -->
+# Usefuls actions
 
+* [`actions/checkout`](https://github.com/marketplace/actions/checkout)
+
+  * allow to checkout a repository 
+  * github_token, ref, depth, path, ... customization
+
+* [`actions/setup`](https://github.com/marketplace?type=actions&query=setup+)
+
+  * allow to install a tool
+  * provided by github and others
+  * setup-java, setup-go, setup-node, setup-terraform, ....
+
+* [`actions/dependency-review-action`](https://github.com/marketplace/actions/dependency-review)
+  * scans pull requests for dependency changes and raise an error if vulnerabilities found.
