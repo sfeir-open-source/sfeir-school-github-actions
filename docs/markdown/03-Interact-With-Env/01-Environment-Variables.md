@@ -61,9 +61,6 @@ More information at :
 <!-- .slide: class="with-big-code"-->
 # Environment Variables : Values between steps and jobs
 
-//TODO
-NOT CLEAR
-
 * `GITHUB_ENV` :
 
 ```yaml

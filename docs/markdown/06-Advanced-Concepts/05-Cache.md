@@ -20,8 +20,6 @@
 
 ## actions/cache
 
-
-
 ![float-right h-200](./assets/images/action_cache.png)
 
 * Provided by Github
