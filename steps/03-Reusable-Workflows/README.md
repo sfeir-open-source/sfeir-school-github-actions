@@ -1,8 +1,12 @@
 # TO DO :
 
-Update the previous workflow to use the environment variable.
+Update the workflow that will test the Node application to make it reusable
 
-**Goal** : Use the environment varable to print the shor Sha-1 
+**Goal** : Use the reusable workflows in a other GA
+
+Update the trigger
+Create a new GA with a manual workflow that call our reusable workflows
+Run the GA with the manual trigger
 
 # Steps
  
