@@ -14,7 +14,7 @@ Create a workflow that will test the Node application.
     <li class="fragment">Run the command <code>npm test</code> in a specific step</li>
     <li class="fragment">Run the GA with the manual trigger</li>
 </ul>
-<div class="fragment"> </br><strong>Bonus</strong> : Run the differents command in the same step </div>
+<div class="fragment"> </br><strong>Bonus</strong> : Run the differents command in the same step</div>
 
 ##--##
 <!-- .slide: class="transition blue"-->

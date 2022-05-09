@@ -35,7 +35,8 @@ function introInteractWithEnv() {
     '03-Interact-With-Env/01-Environment-Variables.md',
     '03-Interact-With-Env/02-Secrets.md',
     '03-Interact-With-Env/03-interact-with-github.md',
-    '03-Interact-With-Env/04-Runner.md'
+    '03-Interact-With-Env/04-Runner.md',
+    '03-Interact-With-Env/05-Exercices.md'
   ];
 }
 

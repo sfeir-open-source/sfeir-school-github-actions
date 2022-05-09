@@ -50,7 +50,7 @@ jobs:
           env:
             SHA_SHORT: ${{ steps.shorthash.outputs.sha_short }}
           run: |
-            echo "I am \"Finding\" difficult to find something to change in this PR so i add the ${SHA_SHORT}" >> file.txt 
+            echo "I can't find anything to change in this PR, so I added the following code : ${SHA_SHORT}" >> file.txt 
 
       - name: Create Pull Request
         id: cpr

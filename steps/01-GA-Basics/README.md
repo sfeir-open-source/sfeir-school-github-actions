@@ -4,7 +4,6 @@ Create a workflow that will test the Node application.
 
 **Goal** : Complete the workflow file located in order to test the npm command.
 
-
 # Steps
  
 Add the checkout step using the marketplace : https://github.com/marketplace/actions/checkout
