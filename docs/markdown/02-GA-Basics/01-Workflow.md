@@ -6,7 +6,7 @@
 
 <br/>
 
-* Defined by a YAML file located in folder `.github/workflows`
+* Defined by YAML files located in folder `.github/workflows`
 * Triggered by an event in your repository, manually, or scheduled.
 * Multiple workflows in repository
 * Jobs can perform a different set of steps.
