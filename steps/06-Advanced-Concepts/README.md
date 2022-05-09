@@ -56,3 +56,26 @@ jobs:
 
 ## Conditional
 
+```yaml
+on: 
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Target tag'     
+        required: false
+
+name: rewrite input
+
+env:
+  INPUT_TAG: ${{ github.sha }}
+
+jobs:
+  rewrite:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: overwrite tag value
+        if: github.event.inputs.tag != ''
+        run: |
+          echo "INPUT_TAG=${{ github.event.inputs.tag }}" >> $GITHUB_ENV
+```
