@@ -1,4 +1,4 @@
-# TO DO :
+# TODO :
 
 Create a workflow that will test the Node application.
 
