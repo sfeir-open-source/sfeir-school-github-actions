@@ -1,6 +1,10 @@
 name: npm test
 on: 
   workflow_call:
+    inputs:
+      node-version:
+        required: true
+        type: string
 
 jobs:
   run-npm-test:
