@@ -4,6 +4,19 @@ Create a workflow that will test the Node application.
 
 **Goal** : Complete the workflow file located in order to test the npm command.
 
+## ⚠️ Prerequisite
+
+* create a file `.github/workflows/ex1.yaml` on `main` branch with the following code
+
+```yaml
+name: npm test
+on: 
+  workflow_dispatch:
+
+jobs:
+```
+
+
 ## Create one job with `npm install` 
 
 * Add the checkout action using the [marketplace](https://github.com/marketplace/actions/checkout)
