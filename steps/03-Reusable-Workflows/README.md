@@ -33,6 +33,6 @@ jobs:
 ## Make your workflow reusable and use it in the same repository
 
 * Use the [docs](https://docs.github.com/en/actions/using-workflows/reusing-workflows)
-* Add a required input to specify node version
+* Add a input to specify node version with a default value `lts`
 
  
