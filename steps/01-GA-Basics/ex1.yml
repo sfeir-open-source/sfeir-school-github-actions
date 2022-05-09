@@ -1,0 +1,10 @@
+name: npm test
+on: 
+  workflow_dispatch:
+
+jobs:
+  run-npm-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: TODO
+        run: echo "TODO"

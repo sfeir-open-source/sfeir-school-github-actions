@@ -46,7 +46,7 @@ jobs:
 
         - name: run test
           shell: bash
-          run: |  
+          run: |
             npm install
             npm test
 ```
