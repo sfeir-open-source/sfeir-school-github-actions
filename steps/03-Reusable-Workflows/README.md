@@ -24,12 +24,15 @@ jobs:
         - name: run test
           shell: bash
           run: |
+            node -v
             npm install
             npm test
+ 
 ```
 
 ## Make your workflow reusable and use it in the same repository
 
 * Use the [docs](https://docs.github.com/en/actions/using-workflows/reusing-workflows)
+* Add an required input to specify node version
 
  
