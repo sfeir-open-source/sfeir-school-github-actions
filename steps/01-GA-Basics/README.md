@@ -6,12 +6,12 @@ Create a workflow that will test the Node application.
 
 # Steps
  
-Add the checkout step using the marketplace : https://github.com/marketplace/actions/checkout
-Setup Node in the GA with the `lts/*` version
-Run the command `npm install` in a specific step 
-Run the command `npm test` in a specific step 
-Run the GA with the manual trigger 
- 
-# Bonus
-Run the differents command in the same step 
+1. Add the checkout action using the [marketplace](https://github.com/marketplace/actions/checkout) : 
+2. Setup Node `lts/*` version with this [action](https://github.com/actions/setup-node)
+3. Run the command `npm install` in a specific step 
+4. Run the command `npm test` in a specific step 
+5. Run the workflow with the manual trigger 
+6. Run `npm install` and `npm test commands in the same step
+
+
 
