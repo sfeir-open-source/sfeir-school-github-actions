@@ -3,7 +3,8 @@ on:
   workflow_call:
     inputs:
       node-version:
-        required: true
+        required: false
+        default: 'lts'
         type: string
 
 jobs:
