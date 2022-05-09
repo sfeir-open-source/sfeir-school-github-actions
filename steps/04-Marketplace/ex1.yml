@@ -1,0 +1,44 @@
+name: npm test
+on: 
+  workflow_dispatch:
+
+jobs:
+  run-npm-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name : test app
+        uses: myRepo/ReusableWorkflow/.github/workflows/test-npm.yaml@main
+
+      - name: get-short-hash
+        id: shorthash
+        env:
+          GITHUB_SHA: ${{ github.sha }}
+        shell: bash
+        run: echo "::set-output name=sha_short::${GITHUB_SHA::7}"
+        
+      - name: generate-change 
+        env:
+          SHA_SHORT: ${{ steps.shorthash.outputs.sha_short }}
+        run: |
+          echo "I can't find anything to change in this PR, so I added the following code : ${SHA_SHORT}" >> file.txt 
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: 'Chore: Something new.'
+          committer: GitHub <noreply@github.com>
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          branch: feat/new_thing
+          delete-branch: true
+          title: 'Chore: Something new.'
+          body: |
+            A nice PR
+            - Auto-generated
+          draft: false
+          base: main
