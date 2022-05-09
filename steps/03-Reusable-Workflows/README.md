@@ -1,20 +1,35 @@
-# TO DO :
+# TODO :
 
-Update the workflow that will test the Node application to make it reusable
+**Goal** : Make a reusable workflow and use it
 
-**Goal** : Use the reusable workflows in a other GA
+## ⚠️ Prerequisite
 
-Update the trigger
-Create a new GA with a manual workflow that call our reusable workflows
-Run the GA with the manual trigger
+* create a file `.github/workflows/ex3.yaml` on `main` branch with the following code
 
-# Steps
+```yaml   
+name: npm test
+on: 
+  workflow_dispatch:
+
+jobs:
+  run-npm-test:
+    runs-on: ubuntu-latest
+    steps:
+        - name: checkout
+          uses: actions/checkout@v2
+        - name : setup node
+          uses: actions/setup-node@v2
+          with:
+            node-version: 'lts/*'
+        - name: run test
+          shell: bash
+          run: |
+            npm install
+            npm test
+```
+
+## Make your workflow reusable and use it in the same repository
+
+* Use the [docs](https://docs.github.com/en/actions/using-workflows/reusing-workflows)
+
  
-Add a new step that will get the Sha-1 to the sort format
-    Use `${GITHUB_SHA::7}`</code>` to get the short Sha-1
-
-Add a new step that will print the shrot Sha-1 from the previous step
-
-# Bonus
-
-Use both the GITHUB_ENV and the Steps outputs
