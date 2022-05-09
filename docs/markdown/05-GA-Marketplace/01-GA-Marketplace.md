@@ -44,7 +44,6 @@ steps:
   # Reference a branch
   - uses: actions/checkout@main
 ```
-<!-- .element class="big-code" -->
 
 <br> 
 <br> 

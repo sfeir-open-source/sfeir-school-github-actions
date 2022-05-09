@@ -42,7 +42,6 @@ jobs:
 * Create a new secrete inside the repository containing the version number that you want to use 
 * use this secret to setup node
 
-
 ## Interact with Github API
 
 //LABELER
