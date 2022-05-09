@@ -9,3 +9,5 @@ jobs:
         - name : test app
           uses: {owner}/{repo}/.github/workflows/{myreusable-workflow.yaml}@main #remote
           # uses:./.github/workflows/{filename} #local
+          with:
+            node-version: 14
