@@ -31,12 +31,17 @@ jobs:
             npm test
 ```
 
-
 ## Switch Node version
  
 * Specify a environnement variable NODE_VERSION=14
 * Use this variable to setup node
 * Check node version with the command `node -v`
+
+## use node version as a secret
+
+* Create a new secrete inside the repository containing the version number that you want to use 
+* use this secret to setup node
+
 
 ## Interact with Github API
 
