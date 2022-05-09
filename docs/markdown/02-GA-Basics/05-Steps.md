@@ -20,4 +20,4 @@
 <!-- .slide: -->
 # Jobs and Steps
 
-![center](../../assets/images/overview-actions-simple.png)
+![center](./assets/images/overview-actions-simple.png)

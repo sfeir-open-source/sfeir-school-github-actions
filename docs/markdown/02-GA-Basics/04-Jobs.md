@@ -11,4 +11,4 @@
 <br/>
 <br/>
 
-![mt-50 center](../../assets/images/job_graph.png)
+![mt-50 center](./assets/images/job_graph.png)
