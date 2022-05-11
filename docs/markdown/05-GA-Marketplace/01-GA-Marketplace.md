@@ -24,7 +24,7 @@ Gaetan
 ![float-right w-800](./assets/images/githubaction_marketplace_action.png)
 
 Notes: 
-
+Node ou Docker
 Demo direct sur la marketplace
 
 Gaetan

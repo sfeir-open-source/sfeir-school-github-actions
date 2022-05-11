@@ -19,9 +19,18 @@
 ```
 <!-- .element: class="big-code" -->
 
+<br/>
+<br/>
+<br/>
+<br/>
+
+https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners
+
 Notes:
 
 1 job = 1 Runner
+Azure / MacOS Github Cloud
+Ip on demand via API
 
 Gaetan
 

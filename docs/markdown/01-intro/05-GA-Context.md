@@ -1,6 +1,7 @@
 <!-- .slide: -->
 
-# G.A Context:
+# Github Actions
+## Context
 
 * Limited Beta Public on 16 Oct 2018
 * General availability since 13 Nov 2019
@@ -9,9 +10,9 @@
 * #1 on Github (Oct 21)
 
 Notes:
-https://githubuniverse.com/content-library/advanced-github-actions
-Gitlab Jun 2015
-Circle CI 2017
-Azure DevOps 2018
+Gaetan <br/>
+Gitlab Jun 2015 <br/>
+Circle CI 2017 <br/>
+Azure DevOps 2018 <br/>
 
-Gaetan
+

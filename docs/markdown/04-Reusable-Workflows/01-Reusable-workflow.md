@@ -15,9 +15,12 @@ Thibauld
 
 ##==## 
 <!-- .slide: class="two-column-layout with-code"-->
-# Difference 
+# Reusable Workflows
+## Difference 
 
 ##--##
+
+<br/>
 
 **Without:**
 
@@ -40,6 +43,8 @@ jobs:
 ```
 
 ##--##
+
+<br/>
 
 **With :**
 
@@ -77,7 +82,8 @@ Thibauld
 
 ##==##
 <!-- .slide: class="with-code"-->
-# How to
+# Reusable Workflows
+## How to
 
 ```yaml
 name: Create and Publish Docker Image
@@ -105,7 +111,8 @@ Thibauld
 
 ##==##
 <!-- .slide: class="with-code"-->
-# Usage
+# Reusable Workflows
+## Usage
 
 ```yaml 
 name: Reusable Workflow user

@@ -5,6 +5,7 @@
 
 * Uploading files: 
   * use `upload-artifact` action
+
 * Downloading files: 
   * use `download-artifact` action
   * use UI.
@@ -12,11 +13,15 @@
 
 <br/><br/>
 
-Default retention period is 90 days.
+* retention period
+  * 90 days for public / 400 days for private
+
 
 Notes:
 
-Gaetan
+Gaetan <br/>
+Use caching when you want to reuse files that don't change often between jobs or workflow runs, such as build dependencies from a package management system.
+Use artifacts when you want to save files produced by a job to view after a workflow run has ended, such as built binaries or build logs.
 
 ##==##
 <!-- .slide: class="with-code"-->
@@ -56,7 +61,7 @@ jobs:
 
 Notes:
 
-Gaetan
+Gaetan <br/>
 
 ##==##
 <!-- .slide: class="with-code"-->

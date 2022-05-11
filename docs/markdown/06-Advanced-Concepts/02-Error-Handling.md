@@ -5,15 +5,14 @@
 
 <br/>
 
-* `continue-on-error`:
+* `continue-on-error`
 
-  Prevents a workflow/job run from failing when a job/step fails.
+  * Prevents a workflow/job run from failing when a job/step fails.
 
 <br/><br/>
 
 * `timeout-minutes`
-
-  Default Job timeout : 360 minutes
+  * Default Job timeout : 360 minutes
 
 Notes:
 
