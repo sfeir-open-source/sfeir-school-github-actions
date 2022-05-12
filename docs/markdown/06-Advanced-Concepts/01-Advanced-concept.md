@@ -53,46 +53,53 @@ Thibauld
 
 ##==##
 <!-- .slide: class="with-code"-->
-# Workflow concurrency
-
-* single job or workflow will run at a time.
-
-* queued job or workflow :
-  * are pending
-  * cancel the older
-* must be unique
-* fallback value for event trigger
-
-```yaml
-  concurrency: ci-${{ github.ref }}
-
-  concurrency: 
-    group: ${{ github.head_ref || github.run_id }}
-    cancel-in-progress: true
-
-  concurrency: 
-    group: ${{ github.workflow }}-${{ github.ref }}
-    cancel-in-progress: true
-
-```
-
-Notes:
-
-* default :  any in-progress job or run
-* ensure that only a single job or workflow using the same concurrency group will run at a time.
-* `||` fallback value
-* To only cancel in-progress runs of the same workflow, you can use the `github.workflow` property to build the concurrency group - eg PR same workflow
-
-Thibauld
-
-##==##
-<!-- .slide: class="with-code"-->
 # Matrix
 
 * `strategy.matrix` key
 * multiple jobs - multiple configurations 
 * run in parallel
 * maximum of 256 jobs per workflow run - `max-parallel: $n`
+
+Notes:
+
+Thibauld
+
+##==## 
+<!-- .slide: class="two-column-layout with-code"-->
+# Matrix
+## Example 
+
+##--##
+
+<br/>
+
+```yaml
+jobs:
+  example_matrix:
+    strategy:
+      max-parallel: 2
+      matrix:
+        version: [10, 12, 14]
+        os: [ubuntu-latest, windows-latest]
+```
+
+##--##
+
+<br/>
+
+```yaml
+jobs:
+  example_matrix:
+    strategy:
+      matrix:
+        os: [ubuntu-18.04, ubuntu-20.04]
+        version: [10, 12, 14]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.version }}
+```
 
 Notes:
 
@@ -150,12 +157,10 @@ Thibauld
 
 ##==## 
 <!-- .slide: class="two-column-layout with-code"-->
-# Matrix
-## Expanding configurations 
+
+# Expanding configurations 
 
 ##--##
-
-<br/>
 
 ```yaml
 strategy:
@@ -175,7 +180,33 @@ strategy:
 
 ##--##
 
-<br/>
+Notes:
+
+Thibauld
+##==## 
+<!-- .slide: class="two-column-layout with-code"-->
+
+# Expanding configurations 
+
+##--##
+
+```yaml
+strategy:
+  matrix:
+    fruit: [apple, pear]
+    animal: [cat, dog]
+    include:
+      - color: green
+      - color: pink
+        animal: cat
+      - fruit: apple
+        shape: circle
+      - fruit: banana
+      - fruit: banana
+        animal: cat
+```
+
+##--##
 
 * {fruit: apple, animal: cat, color: pink, shape: circle}
 * {fruit: apple, animal: dog, color: green, shape: circle}
@@ -191,9 +222,8 @@ Thibauld
 
 ##==##
 <!-- .slide: class="with-code"-->
-# Matrix
-## Expanding configurations 
-
+# Expanding configurations 
+## Example
 
 ```yaml
 jobs:
@@ -206,6 +236,9 @@ jobs:
           - os: windows-latest
             node: 16
             npm: 6
+        exclude:
+          - os: ubuntu-latest
+            version: 16
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/setup-node@v3
@@ -221,93 +254,38 @@ Notes:
 Thibauld
 
 ##==##
-<!-- .slide: class="two-column-layout with-code"-->
-# Matrix
-## Excluding configurations 
+<!-- .slide: class="with-code"-->
+# Workflow concurrency
 
-##--##
+* single job or workflow will run at a time. 
 
-<br/>
-
-```yaml
-strategy:
-  matrix:
-    os: [macos-latest, windows-latest]
-    version: [12, 14, 16]
-    environment: [staging, production]
-    exclude:
-      - os: macos-latest
-        version: 12
-        environment: production
-      - os: windows-latest
-        version: 16
-runs-on: ${{ matrix.os }}
-```
-
-##--##
-
-<br/>
-
-* {os: macos-latest, version: 12, environment: staging}
-* {os: macos-latest, version: 14, environment: staging}
-* {os: macos-latest, version: 14, environment: production}
-* {os: macos-latest, version: 16, environment: staging}
-* {os: macos-latest, version: 16, environment: production}
-* ...
-
-Notes: 
-
-All include combinations are processed after exclude. This allows you to use include to add back combinations that were previously excluded.
-
-Thibauld 
-
-##==##
-<!-- .slide: class="two-column-layout with-code"-->
-# Matrix
-## Dynamic 
-
-##--##
-
-<br/>
-
-```json
-{
-  "include": [{
-    "project": "foo",
-    "config": "Debug"
-  }, {
-    "project": "bar",
-    "config": "Release"
-  }]
-}
-```
-
-##--##
-
-<br/>
+* queued job or workflow : 
+  * are pending 
+  * cancel the older 
+* must be unique
+* fallback value for event trigger 
 
 ```yaml
-name: build
-on: push
-jobs:
-  job1:
-    runs-on: ubuntu-latest
-    outputs:
-      matrix: ${{ steps.set-matrix.outputs.matrix }}
-    steps:
-      - id: set-matrix
-        run: echo "::set-output name=matrix::{\"include\":[{\"project\":\"foo\",\"config\":\"Debug\"},{\"project\":\"bar\",\"config\":\"Release\"}]}"
-  job2:
-    needs: job1
-    runs-on: ubuntu-latest
-    strategy:
-      matrix: ${{fromJSON(needs.job1.outputs.matrix)}}
-    steps:
-      - run: build
+  concurrency: ci-${{ github.ref }}
+
+  concurrency: 
+    group: ${{ github.head_ref || github.run_id }}
+    cancel-in-progress: true
+
+  concurrency: 
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
 ```
 
 Notes:
-Gaetan
+
+* default :  any in-progress job or run
+* ensure that only a single job or workflow using the same concurrency group will run at a time. 
+* `||` fallback value
+* To only cancel in-progress runs of the same workflow, you can use the `github.workflow` property to build the concurrency group - eg PR same workflow
+
+Thibauld
 
 ##==##
 <!-- .slide: -->
