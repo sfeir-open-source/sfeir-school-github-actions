@@ -10,8 +10,10 @@
 name: npm test
 on: 
   workflow_dispatch:
-
+               
 jobs:
+  runs-on: ubuntu-latest
+    steps: 
 ```
 
 ## Create one job with `npm install` 
