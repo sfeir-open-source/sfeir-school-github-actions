@@ -59,6 +59,6 @@ jobs:
 * Change trigger to pull_request on new branch
 * Create a pull request
 * Add a new trigger on push to main branch
-* Add a job to build the dockerfile only for the main branch with the command : `docker build -t {{ github.sha }} .`
+* Add a job to build the dockerfile only for the main branch with the command : `docker build -t ${{ github.sha }} .`
 * Check your workflow run 
 * Merge your pull request and check the workflow run
