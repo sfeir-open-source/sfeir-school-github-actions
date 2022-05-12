@@ -2,9 +2,11 @@
 
 **Goal** : Use Github Actions advanced concepts 
 
-## ⚠️ Prerequisite
 
-* create a file `.github/workflows/ex6.yaml` on `main` branch with the following code
+
+## Use the cache action to store node_modules's data
+
+* create a file `.github/workflows/ex6-cache.yaml` on `main` branch with the following code
 
 ```yaml
 name: npm test
@@ -41,11 +43,33 @@ jobs:
             npm test
 ```
 
-## Use the cache action to store node_modules's data
-
 * use the [cache](https://github.com/marketplace/actions/cache) to cache `./node_modules`
 
 ## Use a matrix to perform a test on several configurations
+
+* create a file `.github/workflows/ex6-matrix.yaml` on `main` branch with the following code
+
+```yaml
+name: npm test
+on: 
+  workflow_dispatch:
+
+jobs:
+  run-npm-install:
+    runs-on: ubuntu-latest
+    steps:
+        - name: checkout
+          uses: actions/checkout@v2
+        - name : setup node
+          uses: actions/setup-node@v2
+          with:
+            node-version: 'lts/*'
+        - name: run install
+          shell: bash
+          run: |
+            npm install
+            npm test
+```
 
 * Run test on :
   * node version `14`, `lts`
@@ -55,6 +79,30 @@ jobs:
   * Run the node version `12` only for the os `ubuntu-latest` 
 
 ## Build on PR and build docker image on main
+
+* create a file `.github/workflows/ex6-build-docker.yaml` on `main` branch with the following code
+
+```yaml
+name: npm test
+on: 
+  workflow_dispatch:
+
+jobs:
+  run-npm-install:
+    runs-on: ubuntu-latest
+    steps:
+        - name: checkout
+          uses: actions/checkout@v2
+        - name : setup node
+          uses: actions/setup-node@v2
+          with:
+            node-version: 'lts/*'
+        - name: run install
+          shell: bash
+          run: |
+            npm install
+            npm test
+```
 
 * Change trigger to pull_request on new branch
 * Create a pull request
