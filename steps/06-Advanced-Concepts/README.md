@@ -21,10 +21,10 @@ jobs:
           uses: actions/setup-node@v2
           with:
             node-version: 'lts/*'
-        - name: run test
+        - name: run install
           shell: bash
           run: |
-            npm test
+            npm install
 
   run-npm-test:
     runs-on: ubuntu-latest
@@ -38,7 +38,6 @@ jobs:
         - name: run test
           shell: bash
           run: |
-            npm install
             npm test
 ```
 
