@@ -1,15 +1,17 @@
 <!-- .slide: class="with-code" -->
 # Steps
 
-* Step can run :
-  * Shell script 
-  * Github Actions
 * Steps are executed in order and are dependent on each other.
 * Each step is executed on the same runner (VM)
 * Single-responsibility principle (SRP) recommended
+* Step can run :
+  * Shell script
+  * Github Actions
 
 ```yaml
    steps:
+      - name: list files
+        run: ls 
       - name: echo a string 
         run: |
           echo "Hello"
@@ -21,15 +23,3 @@
 Notes:
 
 Thibauld
-
-
-
-##==##
-<!-- .slide: -->
-# Jobs and Steps
-
-![center](./assets/images/overview-actions-simple.png)
-
-Notes:
-
-Gaetan

@@ -1,6 +1,6 @@
 <!-- .slide: class="with-code"-->
 
-# Github Actions basics
+# Workflow
 
 "A workflow is a configurable automated process that will run one or more jobs on runner"
 
@@ -11,6 +11,16 @@
 * Multiple workflows in repository
 * Jobs can perform a different set of steps.
 * Each job run in a newly virtual machine
+
+Notes:
+
+Thibauld
+
+##==##
+<!-- .slide: -->
+# Workflow
+
+![center](./assets/images/overview-actions-simple.png)
 
 Notes:
 

@@ -1,80 +1,28 @@
 <!-- .slide: -->
 
 # Reusable Workflows
+## Avoid duplication
 
 - Since November 2021
-- Reusable, avoid duplication 
-- Reference an entire workflow in another one
+- Reference an entire workflow
 - Composite != Reusable Workflows
 - Can’t reference a reusable workflow that’s in a private repository
 - Reusable workflows can’t be stacked on top of one another
-
-Notes:
-
-Thibauld
-
-##==## 
-<!-- .slide: class="two-column-layout with-code"-->
-# Reusable Workflows
-## Difference 
-
-##--##
-
-<br/>
-
-**Without:**
+- Many reusable workflow in caller
 
 ```yaml
+
 jobs:
-  publish:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: docker/setup-buildx-action@v1
-      - uses: docker/login-action@v1
-        with:
-          username: ${{inputs.registry_username}}
-          password: ${{inputs.registry_password}}
-      - uses: docker/build-push-action@v2
-        with:
-          context: .
-          push: true
-          tags: user/app:latest
-```
-
-##--##
-
-<br/>
-
-**With :**
-
-*Reusable Workflow*
-```yaml
-on:
-  workflow_call:
-    inputs:
-      WORKING_DIRECTORY:
-        type: string
-        default: .
-        
-jobs:
-  my-job:
-    ....
-```
-
-_Caller_
-
-```yaml
-jobs:
-  publish:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: my-org/publish-docker@v1
-        with:
-          registry_username: ${{secrets.REGISTRY_USERNAME}}
-          registry_password: ${{secrets.REGISTRY_PASSWORD}}
-```
+  call-workflow-1-in-local-repo:
+    uses: octo-org/this-repo/.github/workflows/workflow-1.yml@main
+    
+  call-workflow-2-in-local-repo:
+    uses: ./.github/workflows/workflow-2.yml
+    
+  call-workflow-in-another-repo:
+    uses: octo-org/another-repo/.github/workflows/workflow.yml@v1
+ 
+ ```
 
 Notes:
 
@@ -83,7 +31,7 @@ Thibauld
 ##==##
 <!-- .slide: class="with-code"-->
 # Reusable Workflows
-## How to
+## 👉 [**How to**](https://docs.github.com/en/actions/using-workflows/reusing-workflows)
 
 ```yaml
 name: Create and Publish Docker Image
