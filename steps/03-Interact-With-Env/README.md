@@ -10,7 +10,7 @@ Update the previous workflow to use the environment variable.
 * update your file `.github/workflows/ex3.yaml` on `feat/myfeature` branch with the following code
 
 ```yaml
-name: interact with Github API
+name: Switch Node version
 on: 
   pull_request:
 
@@ -40,10 +40,10 @@ jobs:
 
 ## Interact with Github API
 
-* Replace `.github/workflows/ex2.yaml` on `feat/myfeature` branch with the following code
+* Replace `.github/workflows/ex3.yaml` on `feat/myfeature` branch with the following code
 
 ```yaml
-name: npm test
+name: interact with Github API
 on: 
   pull_request:
 
