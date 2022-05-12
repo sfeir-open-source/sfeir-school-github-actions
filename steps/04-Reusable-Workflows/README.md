@@ -7,7 +7,7 @@
 * create a file `.github/workflows/ex4.yaml` on `main` branch with the following code
 
 ```yaml
-name: npm test
+name: reusable workflow
 on: 
   workflow_dispatch:
 
