@@ -1,23 +1,6 @@
-<!-- .slide: class="with-code" -->
-# What is the marketplace
-
-* List of free and paid tools
-* GitHub Actions and Apps
-* Anyone can share their apps
-* Anyone can publish an action in GitHub Marketplace
-
-Notes:
-eg. paid : https://github.com/marketplace/wip
-* only apps owned by organizations can sell their app
-
-Gaetan
-
-##==##
 <!-- .slide: -->
-
-# How to use
-
-* https://github.com/marketplace?type=actions
+# Marketplace
+## 👉 [How to use](https://github.com/marketplace?type=actions)
 
 ![float-left w-800](./assets/images/githubsearch.png)
 
@@ -71,18 +54,18 @@ Gaetan
 <!-- .slide: -->
 # Usefuls actions
 
-* [`actions/checkout`](https://github.com/marketplace/actions/checkout)
+* 👉 [**actions/checkout**](https://github.com/marketplace/actions/checkout)
 
   * allow to checkout a repository 
   * github_token, ref, depth, path, ... customization
 
-* [`actions/setup`](https://github.com/marketplace?type=actions&query=setup+)
+* 👉 [**actions/setup**](https://github.com/marketplace?type=actions&query=setup+)
 
   * allow to install a tool
   * provided by github and others
   * setup-java, setup-go, setup-node, setup-terraform, ....
 
-* [`actions/dependency-review-action`](https://github.com/marketplace/actions/dependency-review)
+* 👉 [**actions/dependency-review-action**](https://github.com/marketplace/actions/dependency-review)
   * scans pull requests for dependency changes and raise an error if vulnerabilities found.
 
 Notes:
@@ -109,8 +92,8 @@ Thibauld
 
 ##==##
 <!-- .slide: class="with-code" -->
-
-# Example
+# Risk
+## Example
 
 * step of our Github Actions
 
@@ -133,6 +116,8 @@ Thibauld
 
 ##==##
 <!-- .slide: class="with-code" -->
+# Risk
+## Example
 
 * Credential 
 

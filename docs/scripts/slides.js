@@ -13,9 +13,9 @@ function gaBasicsSlides() {
     '02-GA-Basics/00-TITLE.md',
     '02-GA-Basics/01-Workflow.md',
     '02-GA-Basics/02-Example.md',
-    '02-GA-Basics/03-Triggers.md',
-    '02-GA-Basics/04-Jobs.md',
-    '02-GA-Basics/05-Steps.md',
+    '02-GA-Basics/03-Jobs.md',
+    '02-GA-Basics/04-Steps.md',
+    '02-GA-Basics/05-Triggers.md',
     '02-GA-Basics/06-UI.md',
     '02-GA-Basics/07-Docs-Tools.md',
     '02-GA-Basics/08-Exercices.md'

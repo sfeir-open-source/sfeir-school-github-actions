@@ -51,6 +51,7 @@ steps:
       SUPER_SECRET: ${{ secrets.SuperSecret }}
     run: |
       example-command "$SUPER_SECRET"
+      echo ${{ secrets.SuperSecret }}
 ```
 
 Notes: 

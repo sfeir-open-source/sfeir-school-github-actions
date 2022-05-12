@@ -9,7 +9,7 @@
 * Initialize your exercice repository
   * Create a new repository
   * Download the source code
-  * Commit the exercice [**template**](https://github.com/sfeir-open-source/sfeir-school-github-actions/tree/main/steps/00-prerequisites)
+  * Commit the exercice [👉 **template**](https://github.com/sfeir-open-source/sfeir-school-github-actions/tree/main/steps/00-prerequisites)
 
 Notes:
 

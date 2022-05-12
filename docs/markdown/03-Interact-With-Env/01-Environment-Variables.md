@@ -1,24 +1,11 @@
 <!-- .slide: class="with-code" -->
 # Environment Variables 
-## Context
+## 👉 [Context](https://docs.github.com/en/actions/learn-github-actions/contexts)
 
 | Context |                                      Use case                                      |                  Example |
 | :------ | :--------------------------------------------------------------------------------: | -----------------------: |
 | env     |          Reference custom environment variables defined in the workflow.           |   `${{env.MY_VARIABLE}}` |
 | github  | Reference information about the workflow run and the event that triggered the run. | `${{github.repository}}` |
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-https://docs.github.com/en/actions/learn-github-actions/contexts
-
 
 Notes:
 

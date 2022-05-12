@@ -1,7 +1,7 @@
 <!-- .slide: class="with-code" -->
 # Github Runner
 
-* GitHub-hosted
+* 👉 [**GitHub-hosted**](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners)
   * quicker, simpler way to run your workflows
 
 ```yaml
@@ -18,13 +18,6 @@
     runs-on: [self-hosted, linux, ARM64]
 ```
 <!-- .element: class="big-code" -->
-
-<br/>
-<br/>
-<br/>
-<br/>
-
-https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners
 
 Notes:
 
@@ -63,7 +56,8 @@ Gaetan
 
 <br/>
 
-* Free for public repository or 2000 min/month (**Free plan**)
+* 👉 [**Billing**](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions)
+  * Free for public repository or 2000 min/month for **Free plan**
 
 <br/>
 <br/>
@@ -83,7 +77,7 @@ Gaetan
 
 # Preinstalled software
 
-* [Ubuntu 20.04.4 LTS](https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-Readme.md): 
+* [👉 **Ubuntu 20.04.4 LTS**](https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-Readme.md): 
 
 ```
 Bash 5.0.17(1)-release
