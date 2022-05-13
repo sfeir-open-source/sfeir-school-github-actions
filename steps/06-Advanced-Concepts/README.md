@@ -30,6 +30,7 @@ jobs:
 
   run-npm-test:
     runs-on: ubuntu-latest
+    needs: run-npm-install
     steps:
         - name: checkout
           uses: actions/checkout@v2
