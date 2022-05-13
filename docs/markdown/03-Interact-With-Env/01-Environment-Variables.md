@@ -58,7 +58,7 @@ Thibauld
 <br>
 <br>
 
-* Some name are already used : 
+* Some 👉 [**names**](https://docs.github.com/en/actions/learn-github-actions/environment-variables#default-environment-variables) are already used : 
   * `GITHUB_REF`
   * `GITHUB_SHA`
   * `GITHUB_ENV`
