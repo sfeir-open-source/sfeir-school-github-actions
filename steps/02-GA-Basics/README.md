@@ -12,7 +12,8 @@ on:
   workflow_dispatch:
                
 jobs:
-  runs-on: ubuntu-latest
+  job1:
+    runs-on: ubuntu-latest
     steps: 
 ```
 
