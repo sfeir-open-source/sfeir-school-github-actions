@@ -15,7 +15,7 @@ Gaetan
 ##==##
 <!-- .slide: class="with-code" -->
 
-# Use an GitHub Action from the marketplace
+# Use a GitHub Action from the marketplace
 
 ## Using versioned actions
 
@@ -52,21 +52,21 @@ Gaetan
 
 ##==##
 <!-- .slide: -->
-# Usefuls actions
+# Useful actions
 
 * 👉 [**actions/checkout**](https://github.com/marketplace/actions/checkout)
 
-  * allow to checkout a repository 
+  * allows to check out a repository 
   * github_token, ref, depth, path, ... customization
 
 * 👉 [**actions/setup**](https://github.com/marketplace?type=actions&query=setup+)
 
-  * allow to install a tool
-  * provided by github and others
+  * allows to install a tool
+  * provided by GitHub and others
   * setup-java, setup-go, setup-node, setup-terraform, ....
 
 * 👉 [**actions/dependency-review-action**](https://github.com/marketplace/actions/dependency-review)
-  * scans pull requests for dependency changes and raise an error if vulnerabilities found.
+  * scans pull requests for dependency changes and raises an error if vulnerabilities are found.
 
 Notes:
 
@@ -95,7 +95,7 @@ Thibauld
 # Risk
 ## Example
 
-* step of our Github Actions
+* Step of our GitHub Actions
 
 ```yaml
       - run: |

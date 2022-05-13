@@ -2,7 +2,7 @@
 
 # **Welcome to SFEIR School**
 
-## **Github Action 200**
+## **GitHub Actions 200**
 
 Notes:
 

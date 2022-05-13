@@ -1,3 +1,3 @@
 <!-- .slide: class="transition" -->
 
-# Advanced concept
+# Advanced concepts

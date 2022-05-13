@@ -26,8 +26,8 @@ Gaetan
 
 ![float-right h-200](./assets/images/action_cache.png)
 
-* Provided by Github
-* cache directories, path, or pattern
+* Provided by GitHub
+* Cache directories, path, or pattern
 * Restore cache based on the key
   * partially restore key with restore-keys
 * Upload new cache in case of no exact match

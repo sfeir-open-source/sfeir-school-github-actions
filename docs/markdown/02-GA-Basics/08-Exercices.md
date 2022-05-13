@@ -1,8 +1,8 @@
 <!-- .slide: class="exercice" -->
 
-# Basics Workflow
+# Basic Workflow
 
-## [Exercice 2](https://github.com/sfeir-open-source/sfeir-school-github-actions/blob/main/steps/02-GA-Basics/README.md)
+## [Exercice 1](https://github.com/sfeir-open-source/sfeir-school-github-actions/blob/main/steps/02-GA-Basics/README.md)
 
 **Goal** : Create a workflow that will test the Node application.
 

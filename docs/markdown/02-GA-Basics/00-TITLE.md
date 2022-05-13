@@ -1,6 +1,6 @@
 <!-- .slide: class="transition" -->
 
-# Github Actions basics
+# GitHub Actions basics
 
 Notes:
 

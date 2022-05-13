@@ -1,7 +1,7 @@
 <!-- .slide: class="with-code" -->
-# Interact with Github
+# Interact with GitHub
 
-Github provide a token to interact with the Github API
+GitHub provides a token to interact with the GitHub API
 
 - Automatically generated for each job
 - Default permissions (RW/RO) for **current repository**

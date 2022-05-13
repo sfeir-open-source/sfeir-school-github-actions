@@ -2,9 +2,9 @@
 
 # Interact with the Environment
 
-## [Exercice 3](https://github.com/sfeir-open-source/sfeir-school-github-actions/tree/main/steps/03-Interact-With-Env/README.md)
+## [Exercice 2](https://github.com/sfeir-open-source/sfeir-school-github-actions/tree/main/steps/03-Interact-With-Env/README.md)
 
-**Goal** : Create a workflow which interact with github
+**Goal** : Create a workflow that interacts with GitHub
 
 ![center](https://media.giphy.com/media/Om2ozaOw3rNciJCf2t/giphy-downsized-large.gif)
 

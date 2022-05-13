@@ -1,5 +1,5 @@
 <!-- .slide: class="with-code" -->
-# Github Runner
+# GitHub Runner
 
 * 👉 [**GitHub-hosted**](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners)
   * quicker, simpler way to run your workflows
@@ -29,7 +29,7 @@ Gaetan
 
 ##==##
 <!-- .slide: -->
-# Virtual environment available
+# Virtual environments available
 
 | Virtual environment  |        YAML workflow label         |           Notes |
 | :------------------- | :--------------------------------: | --------------: |
