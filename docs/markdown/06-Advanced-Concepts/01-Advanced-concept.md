@@ -287,7 +287,7 @@ Notes:
 
 Thibauld
 
-#==##
+##==##
 <!-- .slide: class="two-column-layout with-code"-->
 # Matrix
 ## Dynamic
