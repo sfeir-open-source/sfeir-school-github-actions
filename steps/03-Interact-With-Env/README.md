@@ -53,7 +53,8 @@ jobs:
     steps:
 ```
 
-* Add a step which create an issue with [Github API](https://docs.github.com/en/rest/issues/issues#create-an-issue) when workflow is triggered 
+* Add a step which create an issue with [Github API](https://docs.github.com/en/rest/issues/issues#create-an-issue) when workflow is triggered
+  * don't forget auth `--header 'authorization: Bearer <my-token>'
   * Reduce SHA on 7 characters with `${GITHUB_SHA::7}` in a step and use it as output in next step
   * Use the short-sha in the issue title
 
