@@ -9,7 +9,7 @@
 * create a file `.github/workflows/ex6-cache.yaml` on `main` branch with the following code
 
 ```yaml
-name: npm test
+name: cache
 on: 
   workflow_dispatch:
 
