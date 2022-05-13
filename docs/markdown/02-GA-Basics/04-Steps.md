@@ -1,7 +1,7 @@
 <!-- .slide: class="with-code" -->
 # Steps
 
-* Steps are executed in order and are dependent on each other.
+* Steps are executed in order and if the previous job is executed with success
 * Each step is executed on the same runner (VM)
 * Single-responsibility principle (SRP) recommended
 * Step can run :

@@ -1,6 +1,6 @@
 <!-- .slide: class="transition" -->
 
-# Interact with Github environment
+# Interact with GitHub environment
 
 
 Notes:

@@ -2,9 +2,9 @@
 
 # Off-topic :
 
-* Git and GitHub concept
-* Create GitHub Action
-* Self hosted runners
+* Git and GitHub concepts
+* Create a GitHub Action
+* Self-hosted runners
 
 Notes:
 

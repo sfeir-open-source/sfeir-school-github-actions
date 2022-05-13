@@ -7,8 +7,9 @@
 - Reference an entire workflow
 - Composite != Reusable Workflows
 - Can’t reference a reusable workflow that’s in a private repository
-- Reusable workflows can’t be stacked on top of one another
-- Many reusable workflow in caller
+- A **Caller** is a workflow that uses a reusable workflow
+- A reusable workflow can’t be caller of another reusable workflow
+- Many reusable workflows in a caller
 
 ```yaml
 

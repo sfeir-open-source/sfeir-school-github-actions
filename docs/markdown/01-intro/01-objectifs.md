@@ -1,10 +1,10 @@
 <!-- .slide: -->
 
-# Objectifs
+# Objectives
 
-* Know the basics of github actions
-* Create and update a github workflow
-* Use the github actions markeplace
+* Learn the basics of GitHub Actions
+* Create and update a GitHub workflow
+* Use the GitHub Actions marketplace
 
 Notes:
 
