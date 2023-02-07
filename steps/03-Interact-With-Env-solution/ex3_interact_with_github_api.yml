@@ -11,9 +11,9 @@ jobs:
       - id: short_sha
         run: |
           GITHUB_PR_SHA=${{github.event.pull_request.base.sha}}
-           
-          echo "::set-output name=sha_short::${GITHUB_SHA::7}"
-          # echo "::set-output name=sha_short::${GITHUB_PR_SHA::7}"
+          
+          echo "sha_short=${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
+          # echo "sha_short=${GITHUB_PR_SHA::7}" >> $GITHUB_OUTPUT
       # - id: short_sha
       #   run: |
       #     echo "GITHUB_SHA=${GITHUB_SHA::7}" >> $GITHUB_ENV 

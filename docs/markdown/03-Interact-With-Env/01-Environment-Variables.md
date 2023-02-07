@@ -95,7 +95,7 @@ steps:
 ```yaml
 steps:
   - name: Set selected color
-    run: echo '::set-output name=SELECTED_COLOR::green'
+    run: echo 'SELECTED_COLOR=green' >> $GITHUB_OUTPUT
     id: random-color-generator
 
   - name: Get color
@@ -129,7 +129,7 @@ jobs:
     steps:
       - id: step1
         name: send url to other job
-        run: echo "::set-output name=url::https://google.com"
+        run: echo 'url=https://google.com' >> $GITHUB_OUTPUT
 ```
 
 <br>
