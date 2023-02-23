@@ -2,7 +2,7 @@
 version: 2
 updates:
   - package-ecosystem: github-actions
-    directory: "/steps"
+    directory: "/steps/02-GA-Basics-solution"
     schedule:
       interval: daily
       time: "04:00"
@@ -10,3 +10,30 @@ updates:
       separator: "-"
     open-pull-requests-limit: 99
     rebase-strategy: "auto"
+  - package-ecosystem: github-actions
+    directory: "/steps/03-Interact-With-Env-solution"
+    schedule:
+      interval: daily
+      time: "04:00"
+    pull-request-branch-name:
+      separator: "-"
+    open-pull-requests-limit: 99
+    rebase-strategy: "auto"
+  - package-ecosystem: github-actions
+    directory: "/steps/04-Reusable-Workflows-solution"
+    schedule:
+      interval: daily
+      time: "04:00"
+    pull-request-branch-name:
+      separator: "-"
+    open-pull-requests-limit: 99
+    rebase-strategy: "auto"   
+   - package-ecosystem: github-actions
+    directory: "/steps/06-Advanced-Concepts-solution"
+    schedule:
+      interval: daily
+      time: "04:00"
+    pull-request-branch-name:
+      separator: "-"
+    open-pull-requests-limit: 99
+    rebase-strategy: "auto"     
