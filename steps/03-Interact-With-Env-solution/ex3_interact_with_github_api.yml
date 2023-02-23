@@ -3,7 +3,7 @@ on:
   pull_request:
 
 jobs:
-  run-npm-test:
+  create-issue:
     permissions:
       issues: write
     runs-on: ubuntu-latest
