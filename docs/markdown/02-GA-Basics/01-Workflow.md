@@ -2,15 +2,16 @@
 
 # Workflow
 
-"A workflow is a configurable automated process that will run one or more jobs on runner"
+"A workflow is a configurable automated process that will run one or more jobs on a runner"
 
 <br/>
 
 * Defined by YAML files located in folder `.github/workflows`
-* Triggered by an event in your repository, manually, or scheduled.
+* Triggered by an event in your repository, manually, or scheduled
 * Multiple workflows in repository
-* Jobs can perform a different set of steps.
-* Each job run in a newly virtual machine
+* A **workflow** is composed of one or more **jobs**
+* A **job** is composed of one or more **steps**
+* Each job runs in its own virtual machine
 
 Notes:
 
