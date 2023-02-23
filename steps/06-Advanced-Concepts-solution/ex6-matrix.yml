@@ -16,7 +16,7 @@ jobs:
         - name: checkout
           uses: actions/checkout@v2
         - name : setup node
-          uses: actions/setup-node@v2
+          uses: actions/setup-node@v3
           with:
             node-version: ${{ matrix.version }}
         - uses: actions/cache@v3
@@ -44,7 +44,7 @@ jobs:
         - name: checkout
           uses: actions/checkout@v2
         - name : setup node
-          uses: actions/setup-node@v2
+          uses: actions/setup-node@v3
           with:
             node-version: ${{ matrix.version }}
         - uses: actions/cache@v3
