@@ -47,7 +47,7 @@ on:
   pull_request:
 
 jobs:
-  run-npm-test:
+  create-issue:
     runs-on: ubuntu-latest
     steps:
 ```
