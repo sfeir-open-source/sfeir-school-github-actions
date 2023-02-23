@@ -6,8 +6,7 @@ Update the previous workflow to use the environment variable.
 
 ## ⚠️ Prerequisite
 
-* create a file `.github/workflows/ex3.yaml` on `main` branch
-* update your file `.github/workflows/ex3.yaml` on `feat/myfeature` branch with the following code
+* create a file `.github/workflows/ex3.yaml` on `feat/myfeature` branch with the following code
 
 ```yaml
 name: Switch Node version
