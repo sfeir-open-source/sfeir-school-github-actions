@@ -1,0 +1,12 @@
+
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: "/steps"
+    schedule:
+      interval: daily
+      time: "04:00"
+    pull-request-branch-name:
+      separator: "-"
+    open-pull-requests-limit: 99
+    rebase-strategy: "auto"
