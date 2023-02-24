@@ -4,14 +4,16 @@
 GitHub provides a token to interact with the GitHub API
 
 - Automatically generated for each job
-- Default permissions (RW/RO) for **current repository**
+- Default permissions (RO) for **current repository**
 
 ```yaml
-permissions:
-  actions: read|write|none
-  checks: read|write|none
-  ...
-  issues: read|write|none
+job:
+  job1:
+    permissions:
+      actions: read|write|none
+      checks: read|write|none
+      ...
+      issues: read|write|none
 ```
 - It's a secret ! `${{ secrets.GITHUB_TOKEN }}`
 - **Doesn't trigger new workflows**

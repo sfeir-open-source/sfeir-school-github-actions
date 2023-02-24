@@ -1,5 +1,5 @@
 name: matrix
-on: 
+on:
   workflow_dispatch:
 
 jobs:

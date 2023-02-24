@@ -9,6 +9,7 @@
   * pip, pipenv |	setup-python
   * gradle, maven |	setup-java
   * ruby gems |	setup-ruby
+  * go.sum | 	setup-go
 
 * Explicit cache
   * use `actions/cache`
@@ -31,6 +32,7 @@ Gaetan
 * Restore cache based on the key
   * partially restore key with restore-keys
 * Upload new cache in case of no exact match
+* Delete by UI or API
 
 <br/>
 <br/>

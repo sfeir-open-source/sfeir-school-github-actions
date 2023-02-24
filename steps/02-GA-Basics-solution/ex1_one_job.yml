@@ -1,5 +1,5 @@
 name: npm test one job
-on: 
+on:
   workflow_dispatch:
 
 jobs:

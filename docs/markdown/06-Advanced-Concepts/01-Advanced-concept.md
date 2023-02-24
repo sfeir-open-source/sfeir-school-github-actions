@@ -55,12 +55,11 @@ Thibauld
 <!-- .slide: class="with-code"-->
 # Workflow concurrency
 
-* single job or workflow will run at a time.
+* Only one single job or workflow will run at a time.
 
-* queued job or workflow :
-  * are pending
-  * cancel the older
-* must be unique
+* queued job or workflow
+* cancel oldest job or workflow
+* group must be unique
 * fallback value for event trigger
 
 ```yaml
@@ -217,6 +216,12 @@ strategy:
 Notes:
 
 Thibauld
+{color: green} is added to all of the original matrix combinations because it can be added without overwriting any part of the original combinations.
+{color: pink, animal: cat} adds color:pink only to the original matrix combinations that include animal: cat. This overwrites the color: green that was added by the previous include entry.
+{fruit: apple, shape: circle} adds shape: circle only to the original matrix combinations that include fruit: apple.
+{fruit: banana} cannot be added to any original matrix combination without overwriting a value, so it is added as an additional matrix combination.
+{fruit: banana, animal: cat} cannot be added to any original matrix combination without overwriting a value, so it is added as an additional matrix combination. It does not add to the {fruit: banana} matrix combination because that combination was not one of the original matrix combinations.
+
 ##==## 
 <!-- .slide: class="two-column-layout with-code"-->
 
@@ -288,29 +293,9 @@ Notes:
 Thibauld
 
 ##==##
-<!-- .slide: class="two-column-layout with-code"-->
+<!-- .slide: class="with-code"-->
 # Matrix
 ## Dynamic
-
-##--##
-
-<br/>
-
-```json
-{
-  "include": [{
-    "project": "foo",
-    "config": "Debug"
-  }, {
-    "project": "bar",
-    "config": "Release"
-  }]
-}
-```
-
-##--##
-
-<br/>
 
 ```yaml
 name: build
@@ -322,7 +307,7 @@ jobs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
       - id: set-matrix
-        run: echo "matrix={\"include\":[{\"project\":\"foo\",\"config\":\"Debug\"},{\"project\":\"bar\",\"config\":\"Release\"}]}" >> $GITHUB_OUTPUT
+        run: echo "matrix={\"include\":[{\"os\":\"ubuntu\",\"node\":\"12\"},{\"os\":\"windows\",\"node\":\"14\"}]}" >> $GITHUB_OUTPUT
   job2:
     needs: job1
     runs-on: ubuntu-latest

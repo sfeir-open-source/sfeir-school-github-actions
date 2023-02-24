@@ -9,10 +9,12 @@
 
   * Prevents a workflow/job run from failing when a job/step fails.
 
-<br/><br/>
-
 * `timeout-minutes`
   * Default Job timeout : 360 minutes
+
+* Rerun failed job or all job
+
+![center](./assets/images/rerun-checks-drop-down.webp)
 
 Notes:
 

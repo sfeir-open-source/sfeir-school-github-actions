@@ -1,9 +1,10 @@
 <!-- .slide: class="exercice" -->
 
 # Reusable Workflow
-## [Exercice 3](https://github.com/sfeir-open-source/sfeir-school-github-actions/tree/main/steps/04-Reusable-Workflows/README.md)
-
+## Lab
 **Goal** : Make a reusable workflow
+
+[👉 Lab 3](https://github.com/sfeir-open-source/sfeir-school-github-actions/tree/main/steps/04-Reusable-Workflows/README.md)
 
 ![center](https://media.giphy.com/media/wsuqQBTFD5DAq0VPQO/giphy.gif)
 

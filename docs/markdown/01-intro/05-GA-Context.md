@@ -5,9 +5,9 @@
 
 * Limited Beta Public on 16 Oct 2018
 * General availability since 13 Nov 2019
-* 13102 actions on marketplace
-* 147 million jobs per month (Oct 21)
-* #1 on Github (Oct 21)
+* ~~13102 (05/22)~~  17265 (02/23) actions on marketplace
+* ~~147 millions jobs per month (21)~~ 10 millions per day (22)
+* #1 on Github (always)
 
 Notes:
 Gaetan <br/>

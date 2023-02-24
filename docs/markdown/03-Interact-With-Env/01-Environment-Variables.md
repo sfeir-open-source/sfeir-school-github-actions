@@ -1,11 +1,16 @@
 <!-- .slide: class="with-code" -->
-# Environment Variables 
+# Contexts 
 ## 👉 [Context](https://docs.github.com/en/actions/learn-github-actions/contexts)
 
-| Context |                                      Use case                                      |                  Example |
-| :------ | :--------------------------------------------------------------------------------: | -----------------------: |
-| env     |          Reference custom environment variables defined in the workflow.           |   `${{env.MY_VARIABLE}}` |
-| github  | Reference information about the workflow run and the event that triggered the run. | `${{github.repository}}` |
+| Context |                                      Use case                                      |                    Example |
+|:--------|:----------------------------------------------------------------------------------:|---------------------------:|
+| env     |          Reference custom environment variables defined in the workflow.           |     `${{env.MY_VARIABLE}}` |
+| github  | Reference information about the workflow run and the event that triggered the run. |   `${{github.repository}}` |
+| vars    |   Contains variables set at the repository, organization, or environment levels.   |    `${{vars.MY_VARIABLE}}` |
+| secrets |   Contains the names and values of secrets that are available to a workflow run.   | `${{secrets.MY_VARIABLE}}` |
+| ....    |                                        ....                                        |                      `...` |
+
+
 
 Notes:
 
@@ -21,7 +26,7 @@ Three variable scopes :
 * for specific jobs : `GREETING`
 * for specific steps : `FIRST_NAME`
 
-```yaml
+```yaml [1-2|7-8|12-13]
 env:
   OPERATING_SYSTEM: Linux
 
@@ -77,7 +82,7 @@ Thibauld
 
 * `GITHUB_ENV` :
 
-```yaml
+```yaml [5,9]
 steps:
   - name: Set the value
     id: step_one
@@ -92,12 +97,11 @@ steps:
 
 * Steps outputs : 
 
-```yaml
+```yaml [3,4,6]
 steps:
   - name: Set selected color
-    run: echo 'SELECTED_COLOR=green' >> $GITHUB_OUTPUT
     id: random-color-generator
-
+    run: echo 'SELECTED_COLOR=green' >> $GITHUB_OUTPUT
   - name: Get color
     run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_COLOR }}" # This will output 'green'
 ```
@@ -118,9 +122,14 @@ Thibauld
 # Environment Variables 
 ## Values between steps and jobs
 
-* Jobs outputs : 
+* Jobs outputs :
 
-```yaml
+
+<script style="css">
+.code-wrapper { height:600px;}
+</script>
+
+```yaml [1-2,4-5,7,9,11,13,17]
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -130,22 +139,35 @@ jobs:
       - id: step1
         name: send url to other job
         run: echo 'url=https://google.com' >> $GITHUB_OUTPUT
-```
 
-<br>
-<br>
-
-```yaml
-job2:
-    runs-on: ubuntu-latest
-    needs: job1
-    steps:
-      - run: user/some-action@v1
-        with:
-          url: ${{ needs.job1.outputs.url }} 
-
+  job2:
+      runs-on: ubuntu-latest
+      needs: job1
+      steps:
+        - run: user/some-action@v1
+          with:
+            url: ${{ needs.job1.outputs.url }}
 ```
 
 Notes:
 
 Thibauld
+
+##==##
+<!-- .slide: class="two-column"-->
+# Environment Variables 
+## Share variables between workflows
+
+3 levels:
+* organization
+* repository
+* environment
+
+Notes:
+1,000 organization, 500 repository, 100 per environment
+48 KB
+less 256 KB
+##--##
+
+![mr-200 mt-200](./assets/images/github_actions_variables.png)
+

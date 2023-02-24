@@ -1,5 +1,5 @@
 name: npm test
-on: 
+on:
   workflow_call:
     inputs:
       node-version:
