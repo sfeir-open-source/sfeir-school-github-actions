@@ -31,14 +31,14 @@ Gaetan
 <!-- .slide: -->
 # Virtual environments available
 
-| Virtual environment  |        YAML workflow label         |           Notes |
-| :------------------- | :--------------------------------: | --------------: |
-| Windows Server 2022  | `windows-latest` or `windows-2022` | `latest` = 2022 |
-| Windows Server 2019  |            windows-2019            |                 |
-| Ubuntu 20.04         | `ubuntu-latest` or `ubuntu-20.04`  |                 |
-| Ubuntu 18.04         |           `ubuntu-18.04`           |                 |
-| macOS Big Sur 11     |    `macos-latest` or `macos-11`    |   `latest` = 11 |
-| macOS Catalina 10.15 |           `macos-10.15`            |                 |
+| Virtual environment |        YAML workflow label         |           Notes |
+|:--------------------|:----------------------------------:|----------------:|
+| Windows Server 2022 | `windows-latest` or `windows-2022` | `latest` = 2022 |
+| Windows Server 2019 |            windows-2019            |                 |
+| Ubuntu 22.04        | `ubuntu-latest` or `ubuntu-22.04`  |                 |
+| Ubuntu 20.04        |           `ubuntu-20.04`           |                 |
+| macOS Big Sur 12    |    `macos-latest` or `macos-12`    |   `latest` = 12 |
+| macOS Catalina 11   |             `macos-11`             |                 |
 
 Notes:
 
@@ -49,7 +49,7 @@ Gaetan
 # Hardware and Pricing
 
 | Virtual environment    |  CPU  |   RAM | SSD Disk space |
-| :--------------------- | :---: | ----: | -------------: |
+|:-----------------------|:-----:|------:|---------------:|
 | Ubuntu / Window Server | 2 CPU |  7 GB |          14 GB |
 | MacOS                  | 3 CPU | 14 GB |          14 GB |
 
@@ -63,13 +63,14 @@ Gaetan
 <br/>
 
 | Operating system | Minute multiplier |
-| :--------------- | :---------------- |
+|:-----------------|:------------------|
 | Linux            | 1                 |
 | macOS            | 10                |
 | Windows          | 2                 |
 
 Notes:
 
+Billing summary on workflow or usage report at organization level
 Gaetan
 
 ##==##
@@ -77,24 +78,24 @@ Gaetan
 
 # Preinstalled software
 
-* [👉 **Ubuntu 20.04.4 LTS**](https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-Readme.md): 
+* [👉 **Ubuntu 22.04 LTS**](https://github.com/actions/runner-images/blob/main/images/linux/Ubuntu2204-Readme.md): 
 
 ```
-Bash 5.0.17(1)-release
-Node 16.14.2
-Python3 3.8.10
-Helm 3.8.1
-Pip 20.0.2
-... 
+Bash 5.1.16(1)-release
+Node.js 18.14.1
+Perl 5.34.0
+Python 3.10.6
+Ruby 3.0.2p107
+...
 ```
 
 * Customize tools
 
 ```yaml
     - name: Install jq tool
-    run: |
-        sudo apt-get update
-        sudo apt-get install jq
+      run: |
+          sudo apt-get update
+          sudo apt-get install jq
 ```
 
 Notes:

@@ -1,19 +1,21 @@
-<!-- .slide: class="two-column-layout with-code"-->
+<!-- .slide: class="two-column"-->
 # Secrets 
-
-##--##
 
 * Encrypted storage
 * Hidden from log
+* 3 levels
+  * repository
+  * environment
+  * organization
 
 ##--##
-![](./assets/images/secrets.png)
+
+![mr-200 mt-200 ](./assets/images/secrets.png)
 
 Notes:
 
 Gaetan <br/>
-3 levels and uniques <br/>
-64 KB size limit. <br/>
+48 KB size limit. <br/>
 1,000 organization secrets, 100 repository secrets, and 100 environment secrets. <br/>
 access 100 <br/>
 
@@ -23,15 +25,9 @@ no starting with a number. <br/>
 no case-sensitive. <br/>
 
 ##==##
-<!-- .slide: class="two-column-layout with-code"-->
-# Secrets 
+<!-- .slide: class="two-column"-->
 
-
-<br/><br/><br/><br/><br/><br/><br/><br/>
-
-##--##
-
-Secret in action: 
+## Secret in action: 
 
 ```yaml
 steps:
@@ -42,11 +38,11 @@ steps:
 
 ##--##
 
-Secret in bash :
+## Secret in bash :
 
 ```yaml
 steps:
-  - shell: bash #pwsh #cmd
+  - shell: bash
     env:
       SUPER_SECRET: ${{ secrets.SuperSecret }}
     run: |

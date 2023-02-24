@@ -16,9 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: checkout
-          uses: actions/checkout@v2
+          uses: actions/checkout@v3
         - name : setup node
-          uses: actions/setup-node@v2
+          uses: actions/setup-node@v3
           with:
             node-version: 'lts/*'
         - name: run test

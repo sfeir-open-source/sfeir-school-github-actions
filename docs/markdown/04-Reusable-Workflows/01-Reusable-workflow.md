@@ -5,11 +5,9 @@
 
 - Since November 2021
 - Reference an entire workflow
+- Allow to reuse and share workflow
 - Composite != Reusable Workflows
-- Can’t reference a reusable workflow that’s in a private repository
 - A **Caller** is a workflow that uses a reusable workflow
-- A reusable workflow can’t be caller of another reusable workflow
-- Many reusable workflows in a caller
 
 ```yaml
 
@@ -20,14 +18,26 @@ jobs:
   call-workflow-2-in-local-repo:
     uses: ./.github/workflows/workflow-2.yml
     
-  call-workflow-in-another-repo:
+  call-workflow-in-another-repo: # need public repo or specific setting if private
     uses: octo-org/another-repo/.github/workflows/workflow.yml@v1
- 
  ```
 
 Notes:
 
 Thibauld
+
+##==##
+<!-- .slide: -->
+
+# Reusable Workflows
+## Avoid duplication
+
+- 4 levels of nested workflows
+  - caller-workflow → called-workflow-1 → called-workflow-2 → called-workflow-3
+- Max 20 reusable workflows in a caller
+- env context not propagated
+- use variables to share between
+- Allow inputs and secrets sharing
 
 ##==##
 <!-- .slide: class="with-code"-->

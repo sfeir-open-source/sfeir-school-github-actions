@@ -2,9 +2,12 @@
 
 # Basic Workflow
 
-## [Exercice 1](https://github.com/sfeir-open-source/sfeir-school-github-actions/blob/main/steps/02-GA-Basics/README.md)
+## Lab 
 
 **Goal** : Create a workflow that will test the Node application.
+
+[👉 Lab 1](https://github.com/sfeir-open-source/sfeir-school-github-actions/blob/main/steps/02-GA-Basics/README.md)
+
 
 ![center](https://media.giphy.com/media/BpGWitbFZflfSUYuZ9/giphy.gif)
 

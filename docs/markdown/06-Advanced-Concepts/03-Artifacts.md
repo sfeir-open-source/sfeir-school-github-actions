@@ -14,7 +14,7 @@
 <br/><br/>
 
 * retention period
-  * 90 days for public / 400 days for private
+  * 90 days for public / max 400 days for private
 
 
 Notes:
