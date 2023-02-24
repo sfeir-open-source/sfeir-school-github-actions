@@ -33,3 +33,8 @@ jobs:
 
 * Use the [docs](https://docs.github.com/en/actions/using-workflows/reusing-workflows)
 * Add a input to specify node version with a default value `lts`
+
+## Bonus
+
+* Initialize a new repository with the exercice template
+* Create a new workflow using the reusable workflow from your first workflow 
