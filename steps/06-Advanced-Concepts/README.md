@@ -84,9 +84,12 @@ jobs:
 * create a file `.github/workflows/ex6-build-docker.yaml` on `main` branch with the following code
 
 ```yaml
-name: npm test
+name: build docker
 on: 
-  workflow_dispatch:
+  pull_request:
+  push:
+    branches: 
+      - main
 
 jobs:
   run-npm-install:
@@ -105,9 +108,6 @@ jobs:
             npm test
 ```
 
-* Change trigger to pull_request on new branch
-* Create a pull request
-* Add a new trigger on push to main branch
 * Add a job to build the dockerfile only for the main branch with the command : `docker build -t ${{ github.sha }} .`
 * Check your workflow run 
 * Merge your pull request and check the workflow run
