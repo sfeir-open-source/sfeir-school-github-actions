@@ -11,6 +11,7 @@
 
 Notes:
 Gaetan <br/>
+Travis CI 2011 <br/>
 Gitlab Jun 2015 <br/>
 Circle CI 2017 <br/>
 Azure DevOps 2018 <br/>

@@ -1,7 +1,7 @@
 <!-- .slide: class="with-code" -->
 # Example
 
-```yaml
+```yaml[]
 name: learn-github-actions          # Name of the workflow
 on: [push]                          # On which events this workflow should be triggered. We can use this as an array as well (on: [push, pull_request, issue])
 jobs:
