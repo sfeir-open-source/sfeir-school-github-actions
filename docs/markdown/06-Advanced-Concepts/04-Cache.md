@@ -52,7 +52,7 @@ Gaetan
 
 ## Code
 
-```yaml
+```yaml[]
 - name: Cache node modules
   uses: actions/cache@v3
   env:

@@ -6,7 +6,7 @@ GitHub provides a token to interact with the GitHub API
 - Automatically generated for each job
 - Default permissions (RO) for **current repository**
 
-```yaml
+```yaml[]
 job:
   job1:
     permissions:

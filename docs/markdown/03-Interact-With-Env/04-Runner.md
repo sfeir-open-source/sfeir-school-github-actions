@@ -4,7 +4,7 @@
 * 👉 [**GitHub-hosted**](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners)
   * quicker, simpler way to run your workflows
 
-```yaml
+```yaml[]
     runs-on: [ubuntu-latest]
 ```
 <!-- .element: class="big-code" -->
@@ -14,7 +14,7 @@
 * Self-hosted
   * highly configurable way to run workflows
 
-```yaml
+```yaml[]
     runs-on: [self-hosted, linux, ARM64]
 ```
 <!-- .element: class="big-code" -->
@@ -91,7 +91,7 @@ Ruby 3.0.2p107
 
 * Customize tools
 
-```yaml
+```yaml[]
     - name: Install jq tool
       run: |
           sudo apt-get update

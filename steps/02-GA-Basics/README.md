@@ -6,7 +6,7 @@
 
 * create a file `.github/workflows/ex1.yaml` on `main` branch with the following code
 
-```yaml
+```yaml[]
 name: npm test
 on: 
   workflow_dispatch:

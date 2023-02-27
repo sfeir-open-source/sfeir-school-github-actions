@@ -9,7 +9,7 @@
 - Composite != Reusable Workflows
 - A **Caller** is a workflow that uses a reusable workflow
 
-```yaml
+```yaml[]
 
 jobs:
   call-workflow-1-in-local-repo:
@@ -44,7 +44,7 @@ Thibauld
 # Reusable Workflows
 ## 👉 [**How to**](https://docs.github.com/en/actions/using-workflows/reusing-workflows)
 
-```yaml
+```yaml[]
 name: Create and Publish Docker Image
 
 on:

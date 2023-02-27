@@ -6,7 +6,7 @@
 
 * create a file `.github/workflows/ex4.yaml` on `main` branch with the following code
 
-```yaml
+```yaml[]
 name: reusable workflow
 on: 
   workflow_dispatch:

@@ -3,7 +3,7 @@
 
 ## [👉 Event List](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows)
 
-```yaml
+```yaml[]
 on:
   push:
     branches: # Filter which branch

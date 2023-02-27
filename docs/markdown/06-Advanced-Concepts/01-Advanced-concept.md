@@ -31,7 +31,7 @@ Thibauld
 
 * use with an expression with / without `${{ }}`
 
-```yaml
+```yaml[]
 name: example-workflow
 on: [push]
 jobs:
@@ -62,7 +62,7 @@ Thibauld
 * group must be unique
 * fallback value for event trigger
 
-```yaml
+```yaml[]
   concurrency: ci-${{ github.ref }}
 
   concurrency: 
@@ -106,7 +106,7 @@ Thibauld
 
 <br/>
 
-```yaml
+```yaml[]
 jobs:
   example_matrix:
     strategy:
@@ -120,7 +120,7 @@ jobs:
 
 <br/>
 
-```yaml
+```yaml[]
 jobs:
   example_matrix:
     strategy:
@@ -147,7 +147,7 @@ Thibauld
 
 <br/>
 
-```yaml
+```yaml[]
 jobs:
   example_matrix:
     strategy:
@@ -170,7 +170,7 @@ jobs:
 
 <br/>
 
-```yaml
+```yaml[]
 jobs:
   example_matrix:
     strategy:
@@ -195,7 +195,7 @@ Thibauld
 
 ##--##
 
-```yaml
+```yaml[]
 strategy:
   matrix:
     fruit: [apple, pear]
@@ -229,7 +229,7 @@ Thibauld
 
 ##--##
 
-```yaml
+```yaml[]
 strategy:
   matrix:
     fruit: [apple, pear]
@@ -264,7 +264,7 @@ Thibauld
 # Expanding configurations 
 ## Example
 
-```yaml
+```yaml[]
 jobs:
   example_matrix:
     strategy:
@@ -297,7 +297,7 @@ Thibauld
 # Matrix
 ## Dynamic
 
-```yaml
+```yaml[]
 name: build
 on: push
 jobs:

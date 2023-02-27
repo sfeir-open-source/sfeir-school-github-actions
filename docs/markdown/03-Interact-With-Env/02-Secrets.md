@@ -29,7 +29,7 @@ no case-sensitive. <br/>
 
 ## Secret in action: 
 
-```yaml
+```yaml[]
 steps:
   - name: Hello world action
     with: # Set the secret as an input
@@ -40,7 +40,7 @@ steps:
 
 ## Secret in bash :
 
-```yaml
+```yaml[]
 steps:
   - shell: bash
     env:

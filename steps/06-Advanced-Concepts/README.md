@@ -8,7 +8,7 @@
 
 * create a file `.github/workflows/ex6-cache.yaml` on `main` branch with the following code
 
-```yaml
+```yaml[]
 name: cache
 on: 
   workflow_dispatch:
@@ -50,7 +50,7 @@ jobs:
 
 * create a file `.github/workflows/ex6-matrix.yaml` on `main` branch with the following code
 
-```yaml
+```yaml[]
 name: npm test
 on: 
   workflow_dispatch:
@@ -83,7 +83,7 @@ jobs:
 
 * create a file `.github/workflows/ex6-build-docker.yaml` on `main` branch with the following code
 
-```yaml
+```yaml[]
 name: build docker
 on: 
   pull_request:

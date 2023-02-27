@@ -28,7 +28,7 @@ Use artifacts when you want to save files produced by a job to view after a work
 # Artifacts
 ## Uploading files
 
-```yaml
+```yaml[]
 name: Node CI
 
 on: [push]
@@ -70,7 +70,7 @@ Gaetan <br/>
 
 * Retrieve a single artifact
 
-```yaml
+```yaml[]
 - name: Download a single artifact
   uses: actions/download-artifact@v3
   with:
@@ -79,7 +79,7 @@ Gaetan <br/>
 
 * Retrieve all artifacts (one directory for each artifact)
 
-```yaml
+```yaml[]
 - name: Download all workflow run artifacts
   uses: actions/download-artifact@v3
 ```
