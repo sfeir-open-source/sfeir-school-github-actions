@@ -41,7 +41,14 @@ Thibauld
 <p class="center">
 C'est quand la pause ?<br>
 Quand est-ce qu'on mange ?<br>
+Ils sont ou les slides ? <br><br>
 </p>
+
+<p style="text-align: center;font-size:48px;font-weight:bold">https//shorturl.at/nFKZ7</p>
+
+![center h-400](./assets/images/slide-qrcode.png)
+
+
 <br><br>
 
 Notes:
