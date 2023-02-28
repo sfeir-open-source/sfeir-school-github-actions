@@ -9,16 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: short_sha
-        run: |
-          GITHUB_PR_SHA=${{github.event.pull_request.base.sha}}
-          
+        run: |          
           echo "sha_short=${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
-          # echo "sha_short=${GITHUB_PR_SHA::7}" >> $GITHUB_OUTPUT
       # - id: short_sha
       #   run: |
       #     echo "GITHUB_SHA=${GITHUB_SHA::7}" >> $GITHUB_ENV 
             # USE {{env.GITHUB_SHA}} in next step
-
       - name: Create issue using REST API
         run: |
           curl --request POST \
