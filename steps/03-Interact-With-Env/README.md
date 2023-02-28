@@ -64,7 +64,7 @@ jobs:
   
 ```
   curl --request POST \
-  --url https://api.github.com/repos/<specify your repo with a variable>/issues \
+  --url https://api.github.com/repos/<specify your repo with github context>/issues \
   --header 'authorization: Bearer <specify github token>' \
   --header 'content-type: application/json' \
   --data '{
