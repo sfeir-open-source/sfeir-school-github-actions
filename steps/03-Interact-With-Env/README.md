@@ -57,6 +57,27 @@ jobs:
   * Reduce SHA on 7 characters with `${GITHUB_SHA::7}` in a step and use it as output in next step
   * Use the short-sha in the issue title
 
+<details>
+  <summary>Tips</summary>
+
+  * Curl request
+  
+```
+  curl --request POST \
+  --url https://api.github.com/repos/<specify your repo with a variable>/issues \
+  --header 'authorization: Bearer <specify github token>' \
+  --header 'content-type: application/json' \
+  --data '{
+    "title": "Automated issue for commit: ${{ steps.short_sha.outputs.sha_short }}",
+    "body": "This issue was automatically created by the GitHub Action workflow **${{ github.workflow }}**. \n\n The commit hash was: _${{ steps.short_sha.outputs.sha_short }}_."
+    }' \
+  --fail
+```
+
+* Create a step with id: `short_sha` for sha_short output
+
+</details>
+
 ## Bonus
 
 * Generate a PAT (Personal access Token) and use it from secret for calling Github API
