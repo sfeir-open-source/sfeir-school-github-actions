@@ -1,8 +1,6 @@
-# TODO :
+# 06-Advanced Concepts
 
-**Goal** : Use Github Actions advanced concepts 
-
-
+**Goal** : Use Github Actions advanced concepts
 
 ## Use the cache action to store node_modules's data
 

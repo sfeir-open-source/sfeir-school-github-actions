@@ -1,8 +1,12 @@
-# TODO :
+# 02-GA-Basics
 
 **Goal** : Create a workflow that will test the Node application.
 
 ## ⚠️ Prerequisite
+
+* create new github repository or use an existing one
+
+## Create a github workflow file
 
 * create a file `.github/workflows/ex1.yaml` on `main` branch with the following code
 
@@ -18,7 +22,7 @@ jobs:
       # TO COMPLETE      
 ```
 
-## Create one job with `npm install` 
+## Create one job with `npm install`
 
 * Add the checkout action using the [marketplace](https://github.com/marketplace/actions/checkout)
 * Setup Node `lts/*` version with this [action](https://github.com/actions/setup-node)
@@ -35,14 +39,14 @@ jobs:
 
 * Trigger the workflow
 * It fails on `npm test`
-* Ask you why ?! 
+* Ask you why ?!
 
 ## Let's fix it
 
 * Run `npm test` in the same job as `npm install` in different steps
 * Trigger the workflow
 * It works !
- 
+
 ## Bonus
 
 * Run `npm test` in the same step as `npm install`
