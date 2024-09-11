@@ -12,10 +12,13 @@
 * A **workflow** is composed of one or more **jobs**
 * A **job** is composed of one or more **steps**
 * Each job runs in its own virtual machine
+* Can be enforced
 
 Notes:
 
 Thibauld
+* Can be enforced through Repository Rules (Enterprise edition)
+
 
 ##==##
 <!-- .slide: -->

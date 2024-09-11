@@ -38,10 +38,11 @@ function introInteractWithEnv() {
   return [
     '03-Interact-With-Env/00-TITLE.md',
     '03-Interact-With-Env/01-Environment-Variables.md',
-    '03-Interact-With-Env/02-Secrets.md',
-    '03-Interact-With-Env/03-interact-with-github.md',
-    '03-Interact-With-Env/04-Runner.md',
-    '03-Interact-With-Env/05-Exercices.md'
+    '03-Interact-With-Env/02-Job-summary.md',
+    '03-Interact-With-Env/03-Secrets.md',
+    '03-Interact-With-Env/04-interact-with-github.md',
+    '03-Interact-With-Env/05-Runner.md',
+    '03-Interact-With-Env/06-Exercices.md'
   ];
 }
 
@@ -60,7 +61,8 @@ function introAdvancedConceptsSlides() {
     '06-Advanced-Concepts/02-Error-Handling.md',
     '06-Advanced-Concepts/03-Artifacts.md',
     '06-Advanced-Concepts/04-Cache.md',
-    '06-Advanced-Concepts/05-Exercices.md'
+    '06-Advanced-Concepts/05-Exercices.md',
+    '06-Advanced-Concepts/06-Migration.md'
   ];
 }
 

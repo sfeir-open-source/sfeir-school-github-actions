@@ -11,7 +11,7 @@
  
 <h2>Thibauld <span>DUJARDIN</span></h2>
 
-### Site Reliability Engineer
+### Cloud Architect
 <!-- .element: class="icon-rule icon-first" -->
 
 ### dujardin.t@sfeir.com
