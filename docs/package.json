@@ -1,16 +1,16 @@
 {
-  "name": "sfeirschoolxxx",
+  "name": "sfeir-school-github-action-user",
   "version": "1.0.0",
   "description": "SFEIR School Github Actions with revealJS",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sfeir-open-source/sfeir-school-github-actionsgit"
+    "url": "git+https://github.com/sfeir-open-source/sfeir-school-github-actions.git"
   },
   "keywords": [
-    "xxx",
+    "github-action",
     "sfeir"
   ],
-  "author": "jefbinomed",
+  "author": "ThibDujardin",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sfeir-open-source/sfeir-school-github-actions/issues"
@@ -25,7 +25,7 @@
     "prepare": "node ./scripts/dont-touch/prepare-script.js"
   },
   "dependencies": {
-    "sfeir-school-theme": "^3.0.0"
+    "sfeir-school-theme": "^3.1.0"
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
