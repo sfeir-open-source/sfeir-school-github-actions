@@ -2,10 +2,10 @@
 
 # Présentation
 
-![speaker](./assets/images/ggr.jpeg)
+![speaker](./assets/images/remi.jpeg)
 ![company](./assets/images/logo-SFEIR-blanc.png)
 
-<h2>Gérôme <span>Grignon</span></h2>
+<h2>Rémi <span>TETAR</span></h2>
 
 ### Web Developer
 <!-- .element: class="icon-rule icon-first" -->

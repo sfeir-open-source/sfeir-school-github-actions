@@ -2,7 +2,7 @@
 
 # Présentation
 
-![speaker blue](./assets/images/thibauld.jpeg)
+![speaker blue](./assets/images/thibauld_dujardin.jpg)
 ![badge first-badge](./assets/images/cloud-archi_badge.png)
 ![badge second-badge](./assets/images/ckad_badge.png)
 ![badge third-badge](./assets/images/cka_badge.png)

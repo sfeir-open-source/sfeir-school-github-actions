@@ -6,7 +6,7 @@ function schoolSlides() {
     '00-presentation/00-TITLE.md',
     '00-presentation/01-speaker-thibauld.md',
     '00-presentation/02-speaker-gaetan.md',
-    '00-presentation/03-speaker-gerome.md',
+    '00-presentation/03-speaker-remi.md',
     '00-presentation/04-speaker-raphael.md',
     '00-presentation/05-participant.md'
 ];
