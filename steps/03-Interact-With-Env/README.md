@@ -18,9 +18,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: checkout
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
         - name : setup node
-          uses: actions/setup-node@v3
+          uses: actions/setup-node@v4
           with:
             node-version: 'lts/*'
         - name: run test
@@ -34,7 +34,7 @@ jobs:
 
 ## Switch Node version
 
-* Specify a environnement variable NODE_VERSION=14
+* Specify a environnement variable NODE_VERSION=20
 * Use this variable to setup node
 * Check node version with the command `node -v`
 

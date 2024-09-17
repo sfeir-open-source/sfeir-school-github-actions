@@ -17,7 +17,7 @@
           echo "Hello"
           echo "there"
       - name: cloning repo files into the vm 
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 ```
 
 Notes:

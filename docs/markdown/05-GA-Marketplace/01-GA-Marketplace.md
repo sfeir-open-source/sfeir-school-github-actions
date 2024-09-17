@@ -25,10 +25,10 @@ steps:
   - uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675
     
   # Reference a specific version
-  - uses: actions/checkout@v3.2.0
+  - uses: actions/checkout@v4.1.7
     
   # Reference the major version of a release
-  - uses: actions/checkout@v3
+  - uses: actions/checkout@v4
     
   # Reference a branch
   - uses: actions/checkout@main
@@ -55,7 +55,7 @@ steps:
 ```yaml[]
 - name : setup node
   id: my-id
-  uses: actions/setup-node@v3
+  uses: actions/setup-node@v4
   with:
     node-version: '14'
 - name: run test

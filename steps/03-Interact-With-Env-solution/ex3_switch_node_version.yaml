@@ -3,15 +3,15 @@ on:
   pull_request:
 
 env:
-  NODE_VERSION: 14
+  NODE_VERSION: 20
 jobs:
   run-npm-test:
     runs-on: ubuntu-latest
     steps:
         - name: checkout
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
         - name : setup node
-          uses: actions/setup-node@v3
+          uses: actions/setup-node@v4
           with:
             node-version: ${{env.NODE_VERSION}}
         - name: run test
