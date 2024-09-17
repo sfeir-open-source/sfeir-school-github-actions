@@ -1,4 +1,5 @@
 <!-- .slide: class="with-code" -->
+
 # GitHub Runner
 
 * 👉 [**GitHub-hosted**](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners)
@@ -7,6 +8,7 @@
 ```yaml[]
     runs-on: [ubuntu-latest]
 ```
+
 <!-- .element: class="big-code" -->
 
 <br/>
@@ -17,6 +19,7 @@
 ```yaml[]
     runs-on: [self-hosted, linux, ARM64]
 ```
+
 <!-- .element: class="big-code" -->
 
 Notes:
@@ -29,30 +32,31 @@ Gaetan
 
 ##==##
 <!-- .slide: -->
+
 # Virtual environments available
 
 | Virtual environment |        YAML workflow label         |           Notes |
 |:--------------------|:----------------------------------:|----------------:|
 | Windows Server 2022 | `windows-latest` or `windows-2022` | `latest` = 2022 |
 | Windows Server 2019 |            windows-2019            |                 |
-| Ubuntu 22.04        | `ubuntu-latest` or `ubuntu-22.04`  |                 |
+| Ubuntu 24.04        | `ubuntu-latest` or `ubuntu-24.04`  |                 |
+| Ubuntu 22.04        |           `ubuntu-22.04`           |                 |
 | Ubuntu 20.04        |           `ubuntu-20.04`           |                 |
-| macOS Big Sur 12    |    `macos-latest` or `macos-12`    |   `latest` = 12 |
-| macOS Catalina 11   |             `macos-11`             |                 |
+| macOS Monterey 12   |             `macos-12`             |                 |
+| macOS Ventura 13    |             `macos-13`             | arm64 available |
+| macOS Sonoma 14     |    `macos-14` or `macos-latest`    | arm64 available |
 
 Notes:
 
-Gaetan
-
 ##==##
 <!-- .slide: -->
+
 # Hardware and Pricing
 
-| Virtual environment    |  CPU  |   RAM | SSD Disk space |
-|:-----------------------|:-----:|------:|---------------:|
-| Ubuntu / Window Server | 2 CPU |  7 GB |          14 GB |
-| MacOS                  | 3 CPU | 14 GB |          14 GB |
-
+| Virtual environment    | CPU (AVG) | RAM (AVG) | SSD Disk space |
+|:-----------------------|:---------:|----------:|---------------:|
+| Ubuntu / Window Server |   2 CPU   |      7 GB |          14 GB |
+| MacOS                  |   3 CPU   |     14 GB |          14 GB |
 
 <br/>
 
@@ -78,14 +82,14 @@ Gaetan
 
 # Preinstalled software
 
-* [👉 **Ubuntu 22.04 LTS**](https://github.com/actions/runner-images/blob/main/images/linux/Ubuntu2204-Readme.md): 
+* [👉 **Ubuntu 24.04 LTS**](https://github.com/actions/runner-images/blob/main/images/linux/Ubuntu2204-Readme.md):
 
 ```
-Bash 5.1.16(1)-release
-Node.js 18.14.1
-Perl 5.34.0
-Python 3.10.6
-Ruby 3.0.2p107
+Bash 5.2.21(1)-release
+Node.js 20.17.0
+Perl 5.38.2
+Python 3.12.3
+Ruby 3.2.3
 ...
 ```
 

@@ -3,10 +3,10 @@
 
 ## Human readable output
 
-* additional content
-* markdown format
-* mermaid support
-* dynamic 
+* Additional content
+* Markdown format
+* Mermaid support
+* Dynamic 
 
 <br>
 <br>

@@ -2,11 +2,11 @@
 
 # Présentation
 
-![speaker](./assets/images/remi.jpeg)
+![speaker](./assets/images/remi-tetar.png)
 ![company](./assets/images/logo-SFEIR-blanc.png)
 
 <h2>Rémi <span>TETAR</span></h2>
 
-### Web Developer
+### Cloud Architect
 <!-- .element: class="icon-rule icon-first" -->
 
