@@ -1,8 +1,6 @@
-# TODO :
+# 06-Advanced Concepts
 
-**Goal** : Use Github Actions advanced concepts 
-
-
+**Goal** : Use Github Actions advanced concepts
 
 ## Use the cache action to store node_modules's data
 
@@ -18,9 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: checkout
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
         - name : setup node
-          uses: actions/setup-node@v3
+          uses: actions/setup-node@v4
           with:
             node-version: 'lts/*'
         - name: run install
@@ -33,9 +31,9 @@ jobs:
     needs: run-npm-install
     steps:
         - name: checkout
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
         - name : setup node
-          uses: actions/setup-node@v3
+          uses: actions/setup-node@v4
           with:
             node-version: 'lts/*'
         - name: run test
@@ -60,9 +58,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: checkout
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
         - name : setup node
-          uses: actions/setup-node@v3
+          uses: actions/setup-node@v4
           with:
             node-version: 'lts/*'
         - name: run install
@@ -73,11 +71,11 @@ jobs:
 ```
 
 * Run test on :
-  * node version `14`, `lts`
-  * runner os `ubuntu-latest` and `ubuntu-18.04`
+  * node version `20`, `lts`
+  * runner os `ubuntu-latest` and `ubuntu-22.04`
 
 * Bonus : 
-  * Run the node version `12` only for the os `ubuntu-latest` 
+  * Run the node version `18` only for the os `ubuntu-latest` 
 
 ## Build on PR and build docker image on main
 
@@ -96,9 +94,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: checkout
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
         - name : setup node
-          uses: actions/setup-node@v3
+          uses: actions/setup-node@v4
           with:
             node-version: 'lts/*'
         - name: run install

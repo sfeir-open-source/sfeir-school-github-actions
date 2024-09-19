@@ -1,4 +1,4 @@
-# TODO :
+# 04-Reusable Workflows
 
 **Goal** : Make a reusable workflow
 
@@ -16,9 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: checkout
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
         - name : setup node
-          uses: actions/setup-node@v3
+          uses: actions/setup-node@v4
           with:
             node-version: 'lts/*'
         - name: run test
@@ -36,5 +36,5 @@ jobs:
 
 ## Bonus
 
-* Initialize a new repository with the exercice template
+* Initialize a new repository with the exercise template
 * Create a new workflow using the reusable workflow from your first workflow 

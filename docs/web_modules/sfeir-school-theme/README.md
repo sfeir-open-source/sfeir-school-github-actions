@@ -4,11 +4,12 @@
 
 This repository is an Open Source theme for RevealJS presentations. It respect the graphical theme of [@SFEIR](https://github.com/sfeir) company.
 
-You can preview it here : https://sfeir-school-theme.netlify.com/
+You can preview it here : https://sfeir-school-theme.netlify.app/
 
 -   [How to use it](https://github.com/sfeir-open-source/sfeir-school-theme/#how-to-use-it)
 -   [Features](https://github.com/sfeir-open-source/sfeir-school-theme/#features)
     -   [Play with mode theme](https://github.com/sfeir-open-source/sfeir-school-theme/#play-with-mode-theme)
+    -   [I18N your slides](https://github.com/sfeir-open-source/sfeir-school-theme/#i18n-your-slides)
     -   [Specifics Slides](https://github.com/sfeir-open-source/sfeir-school-theme/#specifics-slides)
         -   [First slide](https://github.com/sfeir-open-source/sfeir-school-theme/#first-slide)
         -   [Speaker Slide](https://github.com/sfeir-open-source/sfeir-school-theme/#speaker-slide)
@@ -22,6 +23,8 @@ You can preview it here : https://sfeir-school-theme.netlify.com/
     -   [Helpers](https://github.com/sfeir-open-source/sfeir-school-theme/#helpers)
         -   [List with fragments ](https://github.com/sfeir-open-source/sfeir-school-theme/#list-with-fragments)
         -   [Feather icons ](https://github.com/sfeir-open-source/sfeir-school-theme/#feather-icons)
+        -   [Admonition blocks ](https://github.com/sfeir-open-source/sfeir-school-theme/#admonition-blocks)
+        -   [UI to select your slides](https://github.com/sfeir-open-source/sfeir-school-theme/#ui-to-select-your-slides)
     -   [Print the slides](https://github.com/sfeir-open-source/sfeir-school-theme/#print-the-slides)
 -   [Releases Notes](https://github.com/sfeir-open-source/sfeir-school-theme/wiki/Releases-Notes)
 
@@ -128,12 +131,16 @@ You can still use RevealJS API by importing `Reveal` object in `import { Reveal 
 
 ## Play with mode theme
 
-Lot's of training given by SFEIR School program are also available with the paid program SFEIR Institute (training organism of SFEIR company). The program SFEIR School has a main which is green where SFEIR Institue has a main color which is blue. To use the sames support for both program, a litle trick was introduce in V3.
+Lots of trainings given by SFEIR School program are also available with the paid program SFEIR Institute (training organism of SFEIR company). The program SFEIR School has a main theme color which is green whereas SFEIR Institute has a main theme color which is blue. To use the same support for both programs, V3 makes it possible to switch easily from one theme to another.
 
-In the html, where you could configure the restitution mode (see below for more details). You could define mode for displaying the slides :
+To this end, you have two possibilities:
 
--   **[Institute](https://sfeir-school-theme.netlify.app/index-mode.html#/)**
-    -   _Index.html Configuration_
+-   Use HTML attribute `data-theme-slides`;
+-   Use URL parameter `theme`.
+
+Below are `index.html` and URL examples for the available themes.
+
+1. **[Institute](https://sfeir-school-theme.netlify.app/index-mode.html#/)**
 
 ```html
 <body>
@@ -143,8 +150,9 @@ In the html, where you could configure the restitution mode (see below for more 
 </body>
 ```
 
--   **[School](https://sfeir-school-theme.netlify.app/index.html#/)**
-    -   _Index.html Configuration_
+https://sfeir-school-theme.netlify.app/index.html?theme=institute#/
+
+2. **[School](https://sfeir-school-theme.netlify.app/index.html#/)**
 
 ```html
 <body>
@@ -154,8 +162,9 @@ In the html, where you could configure the restitution mode (see below for more 
 </body>
 ```
 
--   **[Conf](https://sfeir-school-theme.netlify.app/index-conf.html#/)**
-    -   _Index.html Configuration_
+https://sfeir-school-theme.netlify.app/index.html?theme=school#/
+
+3. **[Conf](https://sfeir-school-theme.netlify.app/index-conf.html#/)**
 
 ```html
 <body>
@@ -165,7 +174,9 @@ In the html, where you could configure the restitution mode (see below for more 
 </body>
 ```
 
-The default mode is "school" mode -> Green theme.
+https://sfeir-school-theme.netlify.app/index.html?theme=conf#/
+
+The default value is "school" mode -> Green theme.
 
 Here is an example of first slide according to if you set mode to institute or not.
 
@@ -189,6 +200,35 @@ Here are the impacts of the mode :
 -   The exercice slide
 -   The color of feather icons
 -   The header of tables
+
+## I18N your slides
+
+If you want to translate your slides, you simply have to add the extension corresponding to the translate langage : `XX-slide.EN.md`.
+
+The default langage used is French, so by default a file with no extension or when you ask french slides, the engine provides you the markdown files without lang suffix.
+
+If your asking a slide that is not available in the asked langage, the engine will provide you the "default" langage slide.
+
+To resume, asking `FR` langage will serve you default markdown files.
+
+To specify the langage you want to use, you have two options :
+
+-   define the langage in the index.html
+-   adding a parameter specifying the langage
+
+### Configuration in the index.html
+
+```html
+<body>
+    <div class="reveal">
+        <div class="slides" data-lang="EN">...</div>
+    </div>
+</body>
+```
+
+### Configuration by URL
+
+Simply add a query parameter in the URL `data-lang` with the wanted langage after.
 
 ## Specifics Slides
 
@@ -571,12 +611,14 @@ You can also use class to customise the slide:
     ![](./docs/images/slide-with-code-inconsolata.png)
 
 -   `big-code`: will use a big size of font
+
     ![](./docs/images/slide-with-code-big.png)
 
--   `max-height`: enhanced the size of code block to the maximum of the screen
+-   `max-height`: make the code block of the slide take all vertical space. This class should be define on the second as a complement of `with-code` or `with-code-dark` classes.
+
     ![](./docs/images/slide-with-code-max-height.png)
 
-there is a minor varient of `big-code`, add the class `alone` if there is only one code at screen to position it in the center of screen. Else it will be relative to it's parent
+The additional class `alone` will position the code in the center of screen instead of relative to its parent.
 
 ### Highlight just a part of code
 
@@ -872,7 +914,7 @@ You can add a kind of "footer" credit note to the page by adding the class 'cred
 
 ### Create content for the restitution only
 
-With this theme you can easily create content that is different between, what you will play on stage and what you will give to your attendees without a complete rewrite of your slides. This configuration is a pair between a key specified in your index.html and a key present in your slides.
+With this configuration option you can easily create content that is different between, what you will play on stage and what you will give to your attendees without a complete rewrite of your slides. This configuration is a pair between a key specified in your index.html or URL parameters and a key present in your slides.
 
 **Index.html Configuration**
 
@@ -884,6 +926,8 @@ With this theme you can easily create content that is different between, what yo
 </body>
 ```
 
+https://sfeir-school-theme.netlify.app/index.html?type=prez#/
+
 **Slides configuration**
 
 ```markdown
@@ -894,7 +938,8 @@ With this theme you can easily create content that is different between, what yo
 A few words !
 ```
 
-The slide 'A slide for prez only' will be visible only if the attribute `data-type-show` on index.html is set to "prez".
+The slide 'A slide for prez only' will be visible only if the attribute `data-type-show` on index.html is set to "prez" or if the type URL parameter is set to prez.
+Note that as for the themes described above, the URL parameter takes precedence over the HTML attribute.
 
 With this technique, you can easily create 2 versions of your index.hml, one with `data-type-show` to **prez** and one with `data-type-show`to **full** and in your slides, you have something like that
 
@@ -915,6 +960,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec risus leo. Ve
 ```
 
 If nothing is set in the markdown, the slide will be available for both versions.
+
+You can also set multiples data-type-show in the same slide (separated by a space) to create kind of specifics configurations for your slides.
+
+```markdown
+<!-- .slide: data-type-show="prez other" -->
+```
 
 ### List with fragments
 
@@ -952,9 +1003,9 @@ This will apply on all elements of the list the class `fragment` or use html
 
 In this new version, you could use the library of icons : [feather icons](https://feathericons.com/).
 
-You can use it in 2 way, a Hachky way using markdon image syntax or the normal way with html tag.
+You can use it in 2 way, a Hachky way using markdown image syntax or the normal way with html tag.
 
-The "hacky" way play with mardown image syntax : `![tagList](sourceOfImage)`. So to add a feather icon, you will do this : `![feather](codeOfFeatherIcon)`. The image will be replaced by the correct html
+The "hacky" way plays with mardown image syntax : `![tagList](sourceOfImage)`. So to add a feather icon, you will do this : `![feather](codeOfFeatherIcon)`. The image will be replaced by the correct html.
 
 We introduce some extensible capabilities :
 
@@ -963,7 +1014,7 @@ We introduce some extensible capabilities :
     -   With `small` : size is `24px`
     -   With `big` : size is `96px`
 -   You can define your own custom size using html custom properties in the style of image (see example after) : `--icon-size`
--   By default, the color of icons follow the mode of presentation (school (green) or institute (blue)). You can add your custom color using custom properties in the style of image (see example after) : `--icon-color`
+-   By default, the color of icons follow the mode of presentation (school (green) or institute (blue)). You can add your custom colors using custom properties in the style of image (see example after) : `--icon-color`
 
 ```md
 ## Use Feathers icons
@@ -987,6 +1038,89 @@ Complete list of icons : https://feathericons.com/
 
 ![](./docs/images/feather-icons.png)
 
+### Admonition blocks
+
+You can you admonition blocks to highlight some content in your slides. You can use the following classes:
+
+-   `abstract`
+-   `info`
+-   `tip`
+-   `note`
+-   `success`
+-   `question`
+-   `warning`
+-   `failure`
+-   `danger`
+-   `important`
+-   `bug`
+-   `example`
+-   `quote`
+
+Simply add the class "admonition" with the tip desired as class to transform the text into admonition. This is target for text!
+
+```md
+Mode tip
+
+<!-- .element: class="admonition tip" -->
+```
+
+will produce
+
+![](./docs/images/admonition-tip.png)
+
+to do this in html :
+
+```html
+<p class="admonition tip">>Mode tip</p>
+```
+
+#### Custom Admonition
+
+You can also specify your own icon if you want using 'custom' as class. To specify the icon to use, you will have to add data attribute on your element `data-admonition-icon` with the icon. We recommand you to use Emojis as icon.
+
+There is a default grey background color but if you want, you can customize it using the custom property `--admonition-bg-color` in the style of the element.
+
+```md
+Mode custom
+
+<!-- .element: class="admonition custom" data-admonition-icon="🐼 Custom" -->
+
+Mode custom and custom color
+
+<!-- .element: class="admonition custom" data-admonition-icon="🕶️ Custombis" style="--admonition-bg-color:#d7be00;" -->
+```
+
+this will produce
+
+![](./docs/images/admonition-custom.png)
+
+Here are all the icons availables and modes :
+
+![](./docs/images/admonition-all.png)
+
+### UI to select and configure your slides
+
+To select the slides to display, you have to give to the initializer a function that will return an array of objects with the path of the slides. So to choose your slide, you normally return 'only' the selected slides.
+
+You can also use the 'Slide selector' UI to select your slides. To do this, hit the key 'c' when you presentation is loaded. You will see a modal with all the slides availables. You can select the slides you want to display and click on the 'Validate selection' button. Only the selected path will be displayed.
+
+The selection is stored in session storage so if you reload the page, the selection will be kept. But if you close the window or tab, the selection will be lost.
+
+This UI will let you also configure the theme (institute / school / conf), the langage (FR / EN) and the type (prez / full / ...).
+
+![](./docs/images/slide-selector.png)
+
 ## Print the slides
 
 To print your presentation, simply follow the reveal.js tutorial : [Pdf Export](https://revealjs.com/pdf-export/)
+
+| Configuration                                                   | Description                                                   |
+| --------------------------------------------------------------- | ------------------------------------------------------------- |
+| `index.html?print-pdf&show-notes`                               | Show the notes in the exported page.                          |
+| `<div class="slides" data-show-notes/>`                         | Show the notes in the exported page.                          |
+| `<div class="slides" data-show-notes="separate-page"/>`         | Show the notes of the exported page in a separate page.       |
+| `<div class="slides" data-pdf-max-pages-per-slide="1"/>`        | Ensures that one slide is printed as one page.                |
+| `index.html?print-pdf&pdf-max-pages-per-slide=1`                | Ensures that one slide is printed as one page.                |
+| `<div class="slides" data-pdf-max-pages-per-slide="<number>"/>` | Ensures that one slide is printed as `<number>` page maximum. |
+| `<div class="slides" data-pdf-dont-separate-fragments/>`        | Ensure that fragments are not separated in multiple pages.    |
+| `index.html?print-pdf&pdf-dont-separate-fragments`              | Ensure that fragments are not separated in multiple pages.    |

@@ -9,20 +9,20 @@ jobs:
   run-npm-install:
     strategy:
       matrix:
-        version: [14, lts/*]
-        os: [ubuntu-latest, ubuntu-18.04]
+        version: [20, lts/*]
+        os: [ubuntu-latest, ubuntu-22.04]
         include:
           - os: ubuntu-latest
-            version: 12
+            version: 18
     runs-on: ${{ matrix.os }}
     steps:
         - name: checkout
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
         - name : setup node
-          uses: actions/setup-node@v3
+          uses: actions/setup-node@v4
           with:
             node-version: ${{ matrix.version }}
-        - uses: actions/cache@v3
+        - uses: actions/cache@v4
           with:
             path: ./node_modules
             key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -37,21 +37,21 @@ jobs:
     needs: run-npm-install
     strategy:
       matrix:
-        version: [14, lts/*]
-        os: [ubuntu-latest, ubuntu-18.04]
+        version: [20, lts/*]
+        os: [ubuntu-latest, ubuntu-22.04]
         include:
           - os: ubuntu-latest
-            version: 12
+            version: 18
 
     runs-on: ${{ matrix.os }}
     steps:
         - name: checkout
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
         - name : setup node
-          uses: actions/setup-node@v3
+          uses: actions/setup-node@v4
           with:
             node-version: ${{ matrix.version }}
-        - uses: actions/cache@v3
+        - uses: actions/cache@v4
           with:
             path: ./node_modules
             key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -68,6 +68,6 @@ jobs:
     if: github.event_name == 'push' && github.ref_name == 'main'
     steps:
         - name: checkout
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
         - run: |
             docker build -t ${{ github.sha }} .

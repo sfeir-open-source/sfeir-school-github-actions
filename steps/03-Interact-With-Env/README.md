@@ -1,4 +1,4 @@
-# TODO :
+# 03-Interact-With-Env
 
 Update the previous workflow to use the environment variable.
 
@@ -18,9 +18,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: checkout
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
         - name : setup node
-          uses: actions/setup-node@v3
+          uses: actions/setup-node@v4
           with:
             node-version: 'lts/*'
         - name: run test
@@ -29,11 +29,12 @@ jobs:
             npm install
             npm test
 ```
+
 * create a pull request
 
 ## Switch Node version
- 
-* Specify a environnement variable NODE_VERSION=14
+
+* Specify a environnement variable NODE_VERSION=20
 * Use this variable to setup node
 * Check node version with the command `node -v`
 
@@ -60,9 +61,9 @@ jobs:
 <details>
   <summary>Tips</summary>
 
-  * Curl request
+* Curl request
   
-```
+```bash
   curl --request POST \
   --url https://api.github.com/repos/<specify your repo with github context>/issues \
   --header 'authorization: Bearer <specify github token>' \

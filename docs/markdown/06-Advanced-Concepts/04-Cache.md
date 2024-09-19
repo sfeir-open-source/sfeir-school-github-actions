@@ -54,7 +54,7 @@ Gaetan
 
 ```yaml[]
 - name: Cache node modules
-  uses: actions/cache@v3
+  uses: actions/cache@v4
   env:
     cache-name: cache-node-modules
   with:
