@@ -1,4 +1,4 @@
-# 02-GA-Basics
+# 01-GA-Basics
 
 **Goal** : Create a workflow that will test the Node application.
 

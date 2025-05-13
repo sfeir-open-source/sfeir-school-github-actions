@@ -4,7 +4,7 @@
 ## Lab
 **Goal** : Make a reusable workflow
 
-[Lab 3](https://github.com/sfeir-open-source/sfeir-school-github-actions/tree/main/steps/04-Reusable-Workflows/README.md)
+[Lab 3](https://github.com/sfeir-open-source/sfeir-school-github-actions/tree/main/steps/03-Reusable-Workflows/README.md)
 
 Notes:
 
@@ -12,7 +12,7 @@ Notes:
 ##--##
 <!-- .slide: class="transition blue"-->
 
-# [[Ξ]](https://github.com/sfeir-open-source/sfeir-school-github-actions/tree/main/steps/04-Reusable-Workflows-solution) Solution
+# [[Ξ]](https://github.com/sfeir-open-source/sfeir-school-github-actions/tree/main/steps/03-Reusable-Workflows-solution) Solution
 
 Notes:
 

@@ -7,7 +7,7 @@
 
 **Goal** : Create a workflow that interacts with GitHub
 
-[Lab 2](https://github.com/sfeir-open-source/sfeir-school-github-actions/tree/main/steps/03-Interact-With-Env/README.md)
+[Lab 2](https://github.com/sfeir-open-source/sfeir-school-github-actions/tree/main/steps/02-Interact-With-Env/README.md)
 
 Notes:
 
@@ -15,6 +15,6 @@ Notes:
 ##--##
 <!-- .slide: class="transition blue"-->
 
-# [[Ξ]](https://github.com/sfeir-open-source/sfeir-school-github-actions/tree/main/steps/03-Interact-With-Env-solution) Solution
+# [[Ξ]](https://github.com/sfeir-open-source/sfeir-school-github-actions/tree/main/steps/02-Interact-With-Env-solution) Solution
 
 Notes:

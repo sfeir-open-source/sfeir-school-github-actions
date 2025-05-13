@@ -1,4 +1,4 @@
-# 03-Interact-With-Env
+# 02-Interact-With-Env
 
 Update the previous workflow to use the environment variable.
 

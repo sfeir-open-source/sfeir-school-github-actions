@@ -1,0 +1,48 @@
+name: npm test
+on:
+  workflow_dispatch:
+
+jobs:
+  run-npm-install-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name : setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+      - name: run test
+        shell: bash
+        run: |
+          npm install
+          npm test
+
+  run-npm-install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name : setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+      - name: run test
+        shell: bash
+        run: |
+          npm install
+
+  run-npm-test:
+    needs: run-npm-install
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name : setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+      - name: run test
+        shell: bash
+        run: |
+          npm test

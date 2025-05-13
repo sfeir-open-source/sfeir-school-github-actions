@@ -4,7 +4,7 @@ on:
 
 jobs:
   run-npm-test:
-    uses: ./.github/workflows/ex3-reusable.yml #local
+    uses: ./.github/workflows/reusable.yml #local
     #uses: {owner}/{repo}/.github/workflows/{myreusable-workflow.yaml}@main #remote
     with:
       node-version: 20
