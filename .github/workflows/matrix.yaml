@@ -1,7 +1,7 @@
 name: matrix
 on:
   workflow_dispatch:
-
+  pull_request:
 jobs:
   run-npm-install:
     strategy:
@@ -15,6 +15,9 @@ jobs:
     steps:
         - name: checkout
           uses: actions/checkout@v4
+          with:
+            repository: 'sfeir-open-source/sfeir-school-github-actions-template'
+            path: projects
         - name : setup node
           uses: actions/setup-node@v4
           with:

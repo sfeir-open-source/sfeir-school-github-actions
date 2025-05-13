@@ -20,6 +20,8 @@ jobs:
     steps:
         - name: checkout
           uses: actions/checkout@v4
+          with:
+            repository: 'sfeir-open-source/sfeir-school-github-actions-template'
         - name : setup node
           uses: actions/setup-node@v4
           with:
@@ -49,6 +51,9 @@ jobs:
     steps:
         - name: checkout
           uses: actions/checkout@v4
+          with:
+            repository: 'sfeir-open-source/sfeir-school-github-actions-template'
+
         - name : setup node
           uses: actions/setup-node@v4
           with:
@@ -71,5 +76,8 @@ jobs:
     steps:
         - name: checkout
           uses: actions/checkout@v4
+          with:
+            repository: 'sfeir-open-source/sfeir-school-github-actions-template'
+
         - run: |
             docker build -t ${{ github.sha }} .
