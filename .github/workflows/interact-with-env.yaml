@@ -11,12 +11,17 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+        with:
+          repository: 'https://github.com/sfeir-open-source/sfeir-school-github-actions-template'
+          path: projects
       - name : setup node
         uses: actions/setup-node@v4
         with:
           node-version: ${{env.NODE_VERSION}}
+
       - name: run test
         shell: bash
+        working-directory: projects
         run: |
           node -v
           npm install
