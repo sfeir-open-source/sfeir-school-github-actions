@@ -12,7 +12,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
         with:
-          repository: 'https://github.com/sfeir-open-source/sfeir-school-github-actions-template'
+          repository: 'sfeir-open-source/sfeir-school-github-actions-template'
           path: projects
       - name : setup node
         uses: actions/setup-node@v4
