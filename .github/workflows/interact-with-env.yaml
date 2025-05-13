@@ -1,0 +1,28 @@
+name: interact with Github API
+on:
+  pull_request:
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: 20
+jobs:
+  run-npm-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          repository: 'sfeir-open-source/sfeir-school-github-actions-template'
+          path: projects
+      - name : setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{env.NODE_VERSION}}
+
+      - name: run test
+        shell: bash
+        working-directory: projects
+        run: |
+          node -v
+          npm install
+          npm test

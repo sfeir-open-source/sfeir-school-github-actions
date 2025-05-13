@@ -25,7 +25,7 @@
     "prepare": "node ./scripts/dont-touch/prepare-script.js"
   },
   "dependencies": {
-    "sfeir-school-theme": "3.2.0-rc"
+    "sfeir-school-theme": "3.2.0"
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0",

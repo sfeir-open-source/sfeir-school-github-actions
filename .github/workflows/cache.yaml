@@ -1,0 +1,51 @@
+name: cache
+on:
+  workflow_dispatch:
+  pull_request:
+jobs:
+  run-npm-install:
+    runs-on: ubuntu-latest
+    steps:
+        - name: checkout
+          uses: actions/checkout@v4
+          with:
+            repository: 'sfeir-open-source/sfeir-school-github-actions-template'
+
+        - name : setup node
+          uses: actions/setup-node@v4
+          with:
+            node-version: 'lts/*'
+        - uses: actions/cache@v4
+          with:
+            path: ./node_modules
+            key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+            restore-keys: |
+              ${{ runner.os }}-node-
+        - name: run install
+          shell: bash
+          run: |
+            npm install
+
+  run-npm-test:
+    needs: run-npm-install
+    runs-on: ubuntu-latest
+    steps:
+        - name: checkout
+          uses: actions/checkout@v4
+          with:
+            repository: 'sfeir-open-source/sfeir-school-github-actions-template'
+
+        - uses: actions/cache@v4
+          with:
+            path: ./node_modules
+            key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+            restore-keys: |
+              ${{ runner.os }}-node-
+        - name : setup node
+          uses: actions/setup-node@v4
+          with:
+            node-version: 'lts/*'
+        - name: run test
+          shell: bash
+          run: |
+            npm test
