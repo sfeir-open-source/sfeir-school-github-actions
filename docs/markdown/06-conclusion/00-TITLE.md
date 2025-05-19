@@ -14,6 +14,3 @@
 # Questions
 
 Notes:
-
-Speaker **Romain**
-

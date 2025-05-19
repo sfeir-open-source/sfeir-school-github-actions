@@ -73,7 +73,8 @@ function introAdvancedConceptsSlides() {
 function outroSlides() {
   return [
     '06-conclusion/00-TITLE.md',
-    '06-conclusion/01-feedback.md'
+    '06-conclusion/01-feedback.md',
+    '06-conclusion/02-institute.md'
   ];
 }
 
