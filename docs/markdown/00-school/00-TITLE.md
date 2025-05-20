@@ -1,8 +1,6 @@
 <!-- .slide: class="first-slide" sfeir-level="2" sfeir-techno="G.A" -->
 
-# **Welcome to SFEIR School**
-
-## **GitHub Actions**
+# **GitHub Actions**
 
 Notes:
 
