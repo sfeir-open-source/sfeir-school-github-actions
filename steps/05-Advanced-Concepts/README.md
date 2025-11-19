@@ -16,9 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: checkout
-          uses: actions/checkout@v4
+          uses: actions/checkout@v5
         - name : setup node
-          uses: actions/setup-node@v4
+          uses: actions/setup-node@v6
           with:
             node-version: 'lts/*'
         - name: run install
@@ -31,9 +31,9 @@ jobs:
     needs: run-npm-install
     steps:
         - name: checkout
-          uses: actions/checkout@v4
+          uses: actions/checkout@v5
         - name : setup node
-          uses: actions/setup-node@v4
+          uses: actions/setup-node@v6
           with:
             node-version: 'lts/*'
         - name: run test
@@ -58,9 +58,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: checkout
-          uses: actions/checkout@v4
+          uses: actions/checkout@v5
         - name : setup node
-          uses: actions/setup-node@v4
+          uses: actions/setup-node@v6
           with:
             node-version: 'lts/*'
         - name: run install
@@ -94,9 +94,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: checkout
-          uses: actions/checkout@v4
+          uses: actions/checkout@v5
         - name : setup node
-          uses: actions/setup-node@v4
+          uses: actions/setup-node@v6
           with:
             node-version: 'lts/*'
         - name: run install

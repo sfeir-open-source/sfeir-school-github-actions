@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest          # Selecting a GitHub Hosted Runner (Here selected an ubuntu machine)
     steps:                          # Automated Steps of the job
       - name: Check out repository  # Name of the Step (Optional)
-        uses: actions/checkout@v4   # Signature of the action you want to use here from the market place
+        uses: actions/checkout@v5   # Signature of the action you want to use here from the market place
       - name: Install Node.js  
-        uses: actions/setup-node@v4 
+        uses: actions/setup-node@v6 
         with:
-          node-version: '14'        # Input node version 
+          node-version: '20'        # Input node version 
       - name: Install bats
         run: npm install -g bats    # command of the step 1
       - name: Run bats

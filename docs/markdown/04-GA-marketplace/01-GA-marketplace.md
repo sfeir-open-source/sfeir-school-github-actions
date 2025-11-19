@@ -24,10 +24,10 @@ steps:
   - uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675
     
   # Reference a specific version
-  - uses: actions/checkout@v4.1.7
+  - uses: actions/checkout@v5.0.1
     
   # Reference the major version of a release
-  - uses: actions/checkout@v4
+  - uses: actions/checkout@v5
     
   # Reference a branch
   - uses: actions/checkout@main
@@ -43,7 +43,7 @@ steps:
 
 ```yaml[]
 - name: Inject slug/short variables
-  uses: rlespinasse/github-slug-action@v4
+  uses: rlespinasse/github-slug-action@v5
   with:
     short-length: 8
     prefix: CI_
@@ -54,9 +54,9 @@ steps:
 ```yaml[]
 - name : setup node
   id: my-id
-  uses: actions/setup-node@v4
+  uses: actions/setup-node@v6
   with:
-    node-version: '14'
+    node-version: '20'
 - name: run test
   shell: bash
   run: |
