@@ -13,7 +13,7 @@ jobs:
       - name: Install Node.js  
         uses: actions/setup-node@v6 
         with:
-          node-version: '14'        # Input node version 
+          node-version: '20'        # Input node version 
       - name: Install bats
         run: npm install -g bats    # command of the step 1
       - name: Run bats

@@ -44,14 +44,14 @@ jobs:
           npm run build --if-present
           npm test
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v5
         with:
           name: dist-without-markdown
           path: |
             dist
             !dist/**/*.md
       - name: Archive code coverage results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v5
         with:
           name: code-coverage-report
           path: output/test/code-coverage.html
@@ -69,7 +69,7 @@ Notes:
 
 ```yaml[]
 - name: Download a single artifact
-  uses: actions/download-artifact@v3
+  uses: actions/download-artifact@v6
   with:
     name: my-artifact
 ```
@@ -78,7 +78,7 @@ Notes:
 
 ```yaml[]
 - name: Download all workflow run artifacts
-  uses: actions/download-artifact@v3
+  uses: actions/download-artifact@v6
 ```
 
 <br/>

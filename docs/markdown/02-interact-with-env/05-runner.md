@@ -36,14 +36,13 @@ Ip on demand via API
 
 | Virtual environment |        YAML workflow label         |           Notes |
 |:--------------------|:----------------------------------:|----------------:|
-| Windows Server 2022 | `windows-latest` or `windows-2022` | `latest` = 2022 |
-| Windows Server 2019 |            windows-2019            |                 |
+| Windows Server 2025 | `windows-latest` or `windows-2025` | `latest` = 2025 |
+| Windows Server 2022 |            windows-2022            |                 |
 | Ubuntu 24.04        | `ubuntu-latest` or `ubuntu-24.04`  |                 |
 | Ubuntu 22.04        |           `ubuntu-22.04`           |                 |
-| Ubuntu 20.04        |           `ubuntu-20.04`           |                 |
-| macOS Monterey 12   |             `macos-12`             |                 |
 | macOS Ventura 13    |             `macos-13`             | arm64 available |
-| macOS Sonoma 14     |    `macos-14` or `macos-latest`    | arm64 available |
+| macOS Sonoma 14     |             `macos-14`             | arm64 available |
+| macOS Sequoia 15    |    `macos-15` or `macos-latest`    | arm64 available |
 
 Notes:
 
@@ -84,7 +83,7 @@ Billing summary on workflow or usage report at organization level
 
 ```
 Bash 5.2.21(1)-release
-Node.js 20.17.0
+Node.js 20.19.5
 Perl 5.38.2
 Python 3.12.3
 Ruby 3.2.3

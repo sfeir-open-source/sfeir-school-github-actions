@@ -125,7 +125,7 @@ jobs:
   example_matrix:
     strategy:
       matrix:
-        os: [ubuntu-18.04, ubuntu-20.04]
+        os: [ubuntu-22.04, ubuntu-24.04]
         version: [10, 12, 14]
     runs-on: ${{ matrix.os }}
     steps:
@@ -175,7 +175,7 @@ jobs:
   example_matrix:
     strategy:
       matrix:
-        os: [ubuntu-18.04, ubuntu-20.04]
+        os: [ubuntu-22.04, ubuntu-24.04]
         version: [10, 12, 14]
     runs-on: ${{ matrix.os }}
     steps:
@@ -307,7 +307,7 @@ jobs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
       - id: set-matrix
-        run: echo "matrix={\"include\":[{\"os\":\"ubuntu\",\"node\":\"12\"},{\"os\":\"windows\",\"node\":\"14\"}]}" >> $GITHUB_OUTPUT
+        run: echo "matrix={\"include\":[{\"os\":\"ubuntu\",\"node\":\"20\"},{\"os\":\"windows\",\"node\":\"24\"}]}" >> $GITHUB_OUTPUT
   job2:
     needs: job1
     runs-on: ubuntu-latest
