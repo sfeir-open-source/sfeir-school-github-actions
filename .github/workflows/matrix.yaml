@@ -14,11 +14,11 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
         - name: checkout
-          uses: actions/checkout@v4
+          uses: actions/checkout@v5
           with:
             repository: 'sfeir-open-source/sfeir-school-github-actions-template'
         - name : setup node
-          uses: actions/setup-node@v4
+          uses: actions/setup-node@v6
           with:
             node-version: ${{ matrix.version }}
         - uses: actions/cache@v4
@@ -44,12 +44,12 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
         - name: checkout
-          uses: actions/checkout@v4
+          uses: actions/checkout@v5
           with:
             repository: 'sfeir-open-source/sfeir-school-github-actions-template'
 
         - name : setup node
-          uses: actions/setup-node@v4
+          uses: actions/setup-node@v6
           with:
             node-version: ${{ matrix.version }}
         - uses: actions/cache@v4

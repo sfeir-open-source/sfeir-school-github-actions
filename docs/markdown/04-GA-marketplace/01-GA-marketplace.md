@@ -24,10 +24,10 @@ steps:
   - uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675
     
   # Reference a specific version
-  - uses: actions/checkout@v4.1.7
+  - uses: actions/checkout@v5.1.7
     
   # Reference the major version of a release
-  - uses: actions/checkout@v4
+  - uses: actions/checkout@v5
     
   # Reference a branch
   - uses: actions/checkout@main
