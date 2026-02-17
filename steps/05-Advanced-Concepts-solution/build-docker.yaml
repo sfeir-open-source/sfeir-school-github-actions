@@ -17,12 +17,12 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
         - name: checkout
-          uses: actions/checkout@v5
+          uses: actions/checkout@v6
         - name : setup node
           uses: actions/setup-node@v6
           with:
             node-version: ${{ matrix.version }}
-        - uses: actions/cache@v4
+        - uses: actions/cache@v5
           with:
             path: ./node_modules
             key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -46,12 +46,12 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
         - name: checkout
-          uses: actions/checkout@v5
+          uses: actions/checkout@v6
         - name : setup node
           uses: actions/setup-node@v6
           with:
             node-version: ${{ matrix.version }}
-        - uses: actions/cache@v4
+        - uses: actions/cache@v5
           with:
             path: ./node_modules
             key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -68,6 +68,6 @@ jobs:
     if: github.event_name == 'push' && github.ref_name == 'main'
     steps:
         - name: checkout
-          uses: actions/checkout@v5
+          uses: actions/checkout@v6
         - run: |
             docker build -t ${{ github.sha }} .

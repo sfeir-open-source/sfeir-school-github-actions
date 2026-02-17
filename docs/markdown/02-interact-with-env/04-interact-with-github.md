@@ -21,5 +21,6 @@ job:
 Notes:
 
 Can configure restrictive or permissive mode at org/repo level <br/>
+Default RO only for repos created after Feb 2, 2023. Older repos default to read-write. <br/>
 if not enough, create a PAT(personal access token) token <br/>
 GITHUB_TOKEN expires when a job finishes or after a maximum of 24 hours. <br/>

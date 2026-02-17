@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: checkout
-          uses: actions/checkout@v5
+          uses: actions/checkout@v6
         - name : setup node
           uses: actions/setup-node@v6
           with:
@@ -31,7 +31,7 @@ jobs:
     needs: run-npm-install
     steps:
         - name: checkout
-          uses: actions/checkout@v5
+          uses: actions/checkout@v6
         - name : setup node
           uses: actions/setup-node@v6
           with:
@@ -58,7 +58,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: checkout
-          uses: actions/checkout@v5
+          uses: actions/checkout@v6
         - name : setup node
           uses: actions/setup-node@v6
           with:
@@ -94,7 +94,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: checkout
-          uses: actions/checkout@v5
+          uses: actions/checkout@v6
         - name : setup node
           uses: actions/setup-node@v6
           with:
