@@ -44,7 +44,7 @@ jobs:
       uses: octo-org/action-name@main
     - name: My backup step
       if: failure() # Conditional Step
-      uses: actions/heroku@1.0.0
+      uses: actions/github-script@v7
 ```
 
 Notes:
@@ -112,7 +112,7 @@ jobs:
     strategy:
       max-parallel: 2
       matrix:
-        version: [10, 12, 14]
+        version: [18, 20, 22]
         os: [ubuntu-latest, windows-latest]
 ```
 
@@ -126,7 +126,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-22.04, ubuntu-24.04]
-        version: [10, 12, 14]
+        version: [18, 20, 22]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/setup-node@v6
@@ -153,18 +153,18 @@ jobs:
     strategy:
       max-parallel: 2
       matrix:
-        version: [10, 12, 14]
+        version: [18, 20, 22]
         os: [ubuntu-latest, windows-latest]
 ```
 
 <br/>
 
-* {version: 10, os: ubuntu-latest}
-* {version: 10, os: windows-latest}
-* {version: 12, os: ubuntu-latest}
-* {version: 12, os: windows-latest}
-* {version: 14, os: ubuntu-latest}
-* {version: 14, os: windows-latest}
+* {version: 18, os: ubuntu-latest}
+* {version: 18, os: windows-latest}
+* {version: 20, os: ubuntu-latest}
+* {version: 20, os: windows-latest}
+* {version: 22, os: ubuntu-latest}
+* {version: 22, os: windows-latest}
 
 ##--##
 
@@ -176,7 +176,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-22.04, ubuntu-24.04]
-        version: [10, 12, 14]
+        version: [18, 20, 22]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/setup-node@v6
@@ -270,14 +270,14 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest]
-        node: [12, 14, 16]
+        node: [18, 20, 22]
         include:
           - os: windows-latest
-            node: 16
-            npm: 6
+            node: 22
+            npm: 10
         exclude:
           - os: ubuntu-latest
-            version: 16
+            node: 22
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/setup-node@v6
