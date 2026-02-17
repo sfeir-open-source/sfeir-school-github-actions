@@ -12,11 +12,11 @@ on:
     tags: # Filter which tag
       - '*'
   pull_request:
-    path: # Filter path modification
+    paths: # Filter path modification
       - 'myapp'
   schedule:
     - cron: '*/15 * * * *'
-  issue:
+  issues:
     types:
       - opened
   workflow_dispatch:
