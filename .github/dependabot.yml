@@ -29,7 +29,7 @@ updates:
     open-pull-requests-limit: 99
     rebase-strategy: "auto"
   - package-ecosystem: github-actions
-    directory: "/steps/06-Advanced-Concepts-solution"
+    directory: "/steps/05-Advanced-Concepts-solution"
     schedule:
       interval: daily
       time: "04:00"

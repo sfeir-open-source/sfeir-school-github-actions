@@ -51,10 +51,11 @@ Notes:
 
 # Hardware and Pricing
 
-| Virtual environment    | CPU (AVG) | RAM (AVG) | SSD Disk space |
-|:-----------------------|:---------:|----------:|---------------:|
-| Ubuntu / Window Server |   2 CPU   |      7 GB |          14 GB |
-| MacOS                  |   3 CPU   |     14 GB |          14 GB |
+| Virtual environment                      | CPU (AVG) | RAM (AVG) | SSD Disk space |
+|:-----------------------------------------|:---------:|----------:|---------------:|
+| Ubuntu / Windows Server (public repos)   |  4 vCPU   |     16 GB |          14 GB |
+| Ubuntu / Windows Server (private repos)  |  2 vCPU   |      7 GB |          14 GB |
+| MacOS                                    |   3 CPU   |     14 GB |          14 GB |
 
 <br/>
 
@@ -79,7 +80,7 @@ Billing summary on workflow or usage report at organization level
 
 # Preinstalled software
 
-* [**Ubuntu 24.04 LTS**](https://github.com/actions/runner-images/blob/main/images/linux/Ubuntu2204-Readme.md):
+* [**Ubuntu 24.04 LTS**](https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md):
 
 ```
 Bash 5.2.21(1)-release

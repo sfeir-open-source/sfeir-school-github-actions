@@ -50,7 +50,7 @@ Notes:
 
 ```yaml[]
 - name: Cache node modules
-  uses: actions/cache@v4
+  uses: actions/cache@v5
   env:
     cache-name: cache-node-modules
   with:
