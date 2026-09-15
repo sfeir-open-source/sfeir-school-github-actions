@@ -12,7 +12,7 @@ jobs:
       name: Setup Node
       uses: actions/setupnode@v7
       with:
-        node-version: lts/*
+        node-version: 'lts/*'
 
       name: Install npm
       run: npm install
